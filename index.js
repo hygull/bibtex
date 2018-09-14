@@ -1,5 +1,3 @@
-var getAllEntryTypes = require('./src/getAllEntryTypes')
+var bibTeX = require('./src/BibTeX')
 
-module.exports = {
-	getAllEntryTypes: getAllEntryTypes
-}
+module.exports = bibTeX
