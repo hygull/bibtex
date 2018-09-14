@@ -16,16 +16,26 @@ class BibTeX {
 		this.entryTypeFields = getEntryTypeFields();
 	}
 
+	// Getting all the entry types available in BibTeX
 	getEntryTypes() {
-		// Getting all the entry types available in BibTeX
 		return this.entryTypes;
 	}
 
+	// Getting all the entry type fields (required + optional)
 	getEntryTypeFields() {
-		// Getting all the entry type fields (required + optional)
 		return this.entryTypeFields;
 	}
 
+	// Getting specific entry type fields based on their name
+	getSpecificEntryTypeFields(entryTypeName) {
+		entryTypeName = entryTypeName.toLowerCase()
+
+		if(this.entryTypes.indexOf(entryTypeName) > -1) {
+			return this.getEntryTypeFields()[entryTypeName];
+		} else {
+			return null;
+		}
+	}
 }
 
 module.exports = BibTeX
