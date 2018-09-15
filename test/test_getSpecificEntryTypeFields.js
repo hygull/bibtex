@@ -6,4 +6,25 @@ const bibtex = require("../index");
 
 const bib = new bibtex()
 
-console.log(bib.getSpecificEntryTypeFields("proceedings"));
+const proceedingsEntryFields = bib.getSpecificEntryTypeFields("proceedings")
+
+// Pretty printing (entry type: proceedings)
+console.log(JSON.stringify(proceedingsEntryFields, null, 4));
+
+/*
+	{
+	    "requiredFields": [
+	        "title",
+	        "year"
+	    ],
+	    "optionalFields": [
+	        "editor",
+	        "publisher",
+	        "organization",
+	        "address",
+	        "month",
+	        "note",
+	        "key"
+	    ]
+	}
+*/
