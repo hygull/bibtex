@@ -6,13 +6,13 @@ module.exports = function getEntryTypes() {
 	const data = {
     "article": {
         "description": "An article from a journal or magazine",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "journal",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "volume",
             "number",
             "pages",
@@ -22,13 +22,13 @@ module.exports = function getEntryTypes() {
     },
     "book": {
         "description": "A book with an explicit publisher",
-        "required_fields": [
+        "requiredFields": [
             "author or editor",
             "title",
             "publisher",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "volume or number",
             "series",
             "address",
@@ -39,10 +39,10 @@ module.exports = function getEntryTypes() {
     },
     "booklet": {
         "description": "A work that is printed and bound, but without a named publisher or sponsoring institution",
-        "required_fields": [
+        "requiredFields": [
             "title"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "author",
             "howpublished",
             "address",
@@ -53,14 +53,14 @@ module.exports = function getEntryTypes() {
     },
     "inbook": {
         "description": "A part of a book, e.g., a chpater, section, or whatever and/or a range of pages",
-        "required_fields": [
+        "requiredFields": [
             "author or editor",
             "title",
             "chapter and/or pages",
             "publisher",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "volume or number",
             "series",
             "type",
@@ -72,14 +72,14 @@ module.exports = function getEntryTypes() {
     },
     "incollection": {
         "description": "A part of a book having its own title",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "booktitle",
             "publisher",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "editor",
             "volume or number",
             "series",
@@ -94,13 +94,13 @@ module.exports = function getEntryTypes() {
     },
     "inproceedings": {
         "description": "An article in a conference proceedings",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "booktitle",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "editor",
             "volume or number",
             "series",
@@ -114,10 +114,10 @@ module.exports = function getEntryTypes() {
     },
     "manual": {
         "description": "Technical documentation",
-        "required_fields": [
+        "requiredFields": [
             "title"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "author",
             "organization",
             "address",
@@ -129,13 +129,13 @@ module.exports = function getEntryTypes() {
     },
     "mastersthesis": {
         "description": "A master's thesis",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "school",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "type",
             "address",
             "month",
@@ -144,10 +144,10 @@ module.exports = function getEntryTypes() {
     },
     "misc": {
         "description": "Use this type when nothing else fits. A warning will be issued if all optional fields are empty (i.e., the entire entry is empty or has only ignored fields)",
-        "required_fields": [
+        "requiredFields": [
             "none"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "author",
             "title",
             "howpublished",
@@ -158,13 +158,13 @@ module.exports = function getEntryTypes() {
     },
     "phdthesis": {
         "description": "A Ph.D. thesis",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "school",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "type",
             "address",
             "month",
@@ -173,11 +173,11 @@ module.exports = function getEntryTypes() {
     },
     "proceedings": {
         "description": "Conference proceedings",
-        "required_fields": [
+        "requiredFields": [
             "title",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "editor",
             "volume or number",
             "series",
@@ -190,13 +190,13 @@ module.exports = function getEntryTypes() {
     },
     "techreport": {
         "description": "A report published by a school or other institution, usually numbered within a series",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "institution",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "type",
             "number",
             "address",
@@ -206,12 +206,12 @@ module.exports = function getEntryTypes() {
     },
     "unpublished": {
         "description": "A document having an author and title, but not formally published",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "note"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "month",
             "year"
         ]
