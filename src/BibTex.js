@@ -3,9 +3,10 @@
 //
 // Created: 14 Sep 2018, Fri
 
-const getEntryTypes = require('./getEntryTypes')
-const getEntryTypeFields = require('./getEntryTypeFields')
-const getEntryTypeDescription = require("./getEntryTypeDescription")
+const getEntryTypes = require('./getEntryTypes');
+const getEntryTypeFields = require('./getEntryTypeFields');
+const getEntryTypeDescription = require("./getEntryTypeDescription");
+const getEntryTypeFieldsDescription = require("./getEntryTypeFieldsDescription");
 // const fs = require('fs')
 
 class BibTeX {
@@ -16,6 +17,7 @@ class BibTeX {
 		this.entryTypes = getEntryTypes();
 		this.entryTypeFields = getEntryTypeFields();
 		this.entryTypeDescription = getEntryTypeDescription();
+		this.entryTypeFieldsDescription = getEntryTypeFieldsDescription();
 	}
 
 	// Getting all the entry types available in BibTeX
@@ -31,7 +33,7 @@ class BibTeX {
 	// Getting specific entry type fields based on their name
 	getSpecificEntryTypeFields(entryTypeName) {
 		// Converting entry type to lower case 
-		entryTypeName = entryTypeName.toLowerCase()
+		entryTypeName = entryTypeName.toLowerCase();
 
 		// If entry type is available in the list
 		if(this.entryTypes.indexOf(entryTypeName) > -1) {
@@ -43,8 +45,13 @@ class BibTeX {
 
 	// Getting Entry types description
 	getEntryTypeDescription() {
-		return this.entryTypeDescription
+		return this.entryTypeDescription;
+	}
+
+	// Getting Entry types, fileds, description
+	getEntryTypeFieldsDescription() {
+		return this.entryTypeFieldsDescription;
 	}
 }
 
-module.exports = BibTeX
+module.exports = BibTeX;
