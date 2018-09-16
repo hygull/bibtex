@@ -28,11 +28,13 @@ class BibTeX {
 
 	// Getting specific entry type fields based on their name
 	getSpecificEntryTypeFields(entryTypeName) {
+		// Converting entry type to lower case 
 		entryTypeName = entryTypeName.toLowerCase()
 
+		// If entry type is available in the list
 		if(this.entryTypes.indexOf(entryTypeName) > -1) {
 			return this.getEntryTypeFields()[entryTypeName];
-		} else {
+		} else { // return null if it does not exist
 			return null;
 		}
 	}
