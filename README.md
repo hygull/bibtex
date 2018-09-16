@@ -154,7 +154,7 @@ console.log(JSON.stringify(entryTypeDescription, null, 4));
 */
 ```
 
-## Example 5 - Get entry types, fields, description
+### Example 5 - Get entry types, fields, description
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -202,8 +202,8 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
         ]
     },
     "booklet": {
-        "description": "A work that is printed and bound, but without a 
-        named publisher or sponsoring institution",
+        "description": "A work that is printed and bound, but without a named 
+        publisher or sponsoring institution",
         "required_fields": [
             "title"
         ],
@@ -309,9 +309,9 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
         ]
     },
     "misc": {
-        "description": "Use this type when nothing else fits. A warning 
-        will be issued if all optional fields are empty (i.e., the entire 
-        entry is empty or has only ignored fields)",
+        "description": "Use this type when nothing else fits. A warning will be 
+        issued if all optional fields are empty (i.e., the entire entry is 
+        empty or has only ignored fields)",
         "required_fields": [
             "none"
         ],
