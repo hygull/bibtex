@@ -1,6 +1,8 @@
 # bibtex
 Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
 
+> You can also visit https://hygull.github.io/bibtex/ to see the beautiful documentation for the same.
+
 Please have a look at the below examples.
 
 ### Example 1 - Get all entry types
@@ -108,7 +110,7 @@ console.log(JSON.stringify(proceedingsEntryFields, null, 4));
 */
 ```
 
-## Example 4 - Get little description about entry types 
+### Example 4 - Get little description about entry types 
 
 ```javascript
 const bibtex = require("@hygull/bibtex");

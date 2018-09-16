@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+.git
+.git/*
+*.mp3
+.DS_Store
+*.mp4
