@@ -5,6 +5,7 @@
 
 const getEntryTypes = require('./getEntryTypes')
 const getEntryTypeFields = require('./getEntryTypeFields')
+const getEntryTypeDescription = require("./getEntryTypeDescription")
 // const fs = require('fs')
 
 class BibTeX {
@@ -14,6 +15,7 @@ class BibTeX {
 		// this.entryTypeFields = fs.readFileSync('../json/entryTypeFields.json', 'utf-8')
 		this.entryTypes = getEntryTypes();
 		this.entryTypeFields = getEntryTypeFields();
+		this.entryTypeDescription = getEntryTypeDescription();
 	}
 
 	// Getting all the entry types available in BibTeX
@@ -37,6 +39,11 @@ class BibTeX {
 		} else { // return null if it does not exist
 			return null;
 		}
+	}
+
+	// Getting Entry types description
+	getEntryTypeDescription() {
+		return this.entryTypeDescription
 	}
 }
 
