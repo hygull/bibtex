@@ -389,6 +389,9 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
 ### Example 6 - Getting HTML Code (form) for a specific entry type
 
 > Bootstrap 3 form element (Inspired from [https://www.w3schools.com/bootstrap/bootstrap_forms.asp](https://www.w3schools.com/bootstrap/bootstrap_forms.asp)).
+>
+> Curretly, all input fields are of type `'text'` (even if it is a number like `year` etc.). User can add javascript code for validation of form fields or use his/her own approach for validations & design(using custom stylesheets) etc.
+>
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
