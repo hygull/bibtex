@@ -1,9 +1,57 @@
 /*
-	Created: 14 Sep 2018, Fri
+	Created: 18 Sep 2018, Wed
 */
 
-module.exports = function getEntryTypeFieldsDescription() {
-	const data = {
+const getEntryTypeFieldsDescription = require("./getEntryTypeFieldsDescription");
+
+module.exports = function getFormFor(entryType) {
+	const entryTypes = getEntryTypeFieldsDescription();
+
+    const keys = Object.keys(entryTypes);
+    // console.log(keys);
+
+    entryType = entryType.trim();
+    let formCode = '';
+
+    if(keys.indexOf(entryType) > -1) {
+    	let requiredEntry = entryTypes[entryType];
+    	formCode += "<form action='#' method='GET' name='" + entryType +"'>\n";
+    	
+    	let requiredFieldsCode = getFormFieldsCode(requiredEntry["requiredFields"], true); 
+    	let optionalFieldsCode = getFormFieldsCode(requiredEntry["optionalFields"], false)
+    	formCode += requiredFieldsCode + "\n" + optionalFieldsCode;
+    } else {
+    	return null;
+    }
+    
+    formCode += "\t<button type='submit' class='btn btn-success'>Submit</button>\n" + 
+				"</form>";
+
+	return formCode;
+}
+
+
+
+function getFormFieldsCode(fields, required) {
+	// Validation is not required
+	// It is being done inside the calling code
+	let fieldCode = '';
+	for(let field of fields) {
+    		// <div class="form-group">
+		    //   <label for="pwd">Password:</label>
+		    //   <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+		    // </div>
+    		fieldCode += "\t<div class='form-group'>\n";
+    		fieldCode += "\t\t<label for='" + field +"'>" + field + ":</label>\n";
+    		fieldCode += "\t\t<input type='text' class='form-control' id='" + field + "' placeholder='Enter " + field + "' name='" + field + "' required='" + required +"'>\n";
+    		fieldCode += "\t</div>\n";
+    }
+
+    return fieldCode;
+}
+
+/*
+{
     "article": {
         "description": "An article from a journal or magazine",
         "requiredFields": [
@@ -216,7 +264,5 @@ module.exports = function getEntryTypeFieldsDescription() {
             "year"
         ]
     }
-};
-
-return data;
 }
+*/

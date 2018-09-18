@@ -91,10 +91,12 @@ def main():
 					#    	}
 				# }
 				required_fields = get_fields(td_content.string)
-				entry_types[key]["required_fields"] = required_fields
+                # entry_types[key]["required_fields"] = required_fields
+				entry_types[key]["requiredFields"] = required_fields
 			else:
 				optional_fields = get_fields(td_content.string)
-				entry_types[key]["optional_fields"] = optional_fields
+                # entry_types[key]["optional_fields"] = optional_fields
+				entry_types[key]["optionalFields"] = optional_fields
 
 	print(entry_types)
 
