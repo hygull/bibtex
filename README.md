@@ -388,15 +388,17 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
 
 ### Example 6 - Getting HTML Code (form) for a specific entry type
 
+> Bootstrap 3 form element (Inspired from [https://www.w3schools.com/bootstrap/bootstrap_forms.asp](https://www.w3schools.com/bootstrap/bootstrap_forms.asp)).
+
 ```javascript
-const bibtex = require("");
+const bibtex = require("@hygull/bibtex");
 
-const bib = new bibtex()
+const bib = new bibtex();
 
-const formCode = bib.getFormFor('article')
+const formCode = bib.getFormFor('article');
 
 // Pretty printing 
-console.log(formCode)
+console.log(formCode);
 
 /*
 <form action='#' method='GET' name='article'>
@@ -441,6 +443,7 @@ console.log(formCode)
 </form>
 */
 ```
+
 **Note:** Do not foget to check this page if you're working with Latex, BibTeX etc.
 
 ### Reference links
