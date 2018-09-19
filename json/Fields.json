@@ -1,0 +1,99 @@
+{
+    "address": {
+        "description": "Usually the address of the publisher or other institution.",
+        "note": ""
+    },
+    "annote": {
+        "description": "An annotation.",
+        "note": "Not used by the standard bibliography styles, but used by others that produce an annotated bibliography (e.g., annote). The field starts a new sentence and hence the first word should be capitalized."
+    },
+    "author": {
+        "description": "The name(s) of the author(s), in BibTeX name format.",
+        "note": ""
+    },
+    "booktitle": {
+        "description": "Title of a book, part of which is being cited.",
+        "note": "For book entries use the title field"
+    },
+    "chapter": {
+        "description": "A chapter (or section or whatever) number.",
+        "note": ""
+    },
+    "crossref": {
+        "description": "The database key of the entry being cross-referenced",
+        "note": ""
+    },
+    "edition": {
+        "description": "The edition of a book (e.g., \"Second\").",
+        "note": "This should be an ordinal, and should have the first letter capitalized, as shown above; the standard styles convert to lowercase when necessary."
+    },
+    "editor": {
+        "description": "",
+        "note": "If there is also an author field, then the editor field gives the editor of the book or collection in which the reference appears."
+    },
+    "howpublished": {
+        "description": "How something strange has been published.",
+        "note": ""
+    },
+    "institution": {
+        "description": "Institutuion sponsoring a technical report.",
+        "note": ""
+    },
+    "journal": {
+        "description": "Journal name. Abbrevations are provided for many journals.",
+        "note": ""
+    },
+    "key": {
+        "description": "Used for alphabetizing, cross-referencing, and creating a label when the author and editor information is missing.",
+        "note": "This field should not be confused with the key that appears in the \\cite command and at the beginning of the database entry."
+    },
+    "month": {
+        "description": "The month in which the work was published or, for an unpublished work, in which it was written.",
+        "note": "For reasons of consistency the standard three-letter abbreviations (jan, feb, mar, etc.) should be used."
+    },
+    "note": {
+        "description": "Any additional information that can help the reader.",
+        "note": ""
+    },
+    "number": {
+        "description": "The number of a journal, magazine, technical report, or work in a series.",
+        "note": "An issue of a journal or magazine is usually identified by its volume and number; a technical report normally has a number; and sometimes books in a named series carry numbers."
+    },
+    "organization": {
+        "description": "The organization that sponsors a conference or that publishes a manual.",
+        "note": ""
+    },
+    "pages": {
+        "description": "One or more page numbers or range of numbers.",
+        "note": "(e.g., 42-111 or 7,41, 73-97 or 43+, where the '+' indicates pages that do not form a simple range)"
+    },
+    "publisher": {
+        "description": "The publisher's name.",
+        "note": ""
+    },
+    "school": {
+        "description": "The name of the school where the thesis was written.",
+        "note": ""
+    },
+    "series": {
+        "description": "The name of a series or set of books.",
+        "note": "When citing an entire book, the title field gives its title and an optional series field gives the name of a series or multivolume set in which the book is published."
+    },
+    "title": {
+        "description": "The work's title, typed as explained in",
+        "note": ""
+    },
+    "type": {
+        "description": "The type of a technical report(e.g., \"Research Note\").",
+        "note": "This name is used instead of the default \"Technical Report\". For the entry type phdthesis you could use the term \"Ph.D. dissertation\" by specifying: type = \"{Ph.D.} dissertation\". Similarly, for the inbook and incollection entry types you can get \"section 1.2\" instead of the default \"chapter 1.2\" with chapter = \"1.2\" and type = \"Section\"."
+    },
+    "volume": {
+        "description": "The volume of a journal or multivolume book.",
+        "note": ""
+    },
+    "year": {
+        "description": "The year of publication or, for an unpublished work, the year it was written.",
+        "note": "Generally, it should consist of four numerals, such as 1984, although the standard styles can handle any year whose last four nonpunctuation characters are numerals, such as \"about 1984\"."
+    }
+}
+
