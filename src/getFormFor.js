@@ -1,5 +1,5 @@
 /*
-	Created: 18 Sep 2018, Wed
+	Created: 18 Sep 2018, Tue
 */
 
 const getEntryTypeFieldsDescription = require("./getEntryTypeFieldsDescription");

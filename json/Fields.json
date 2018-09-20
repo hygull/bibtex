@@ -1,7 +1,7 @@
 {
     "address": {
         "description": "Usually the address of the publisher or other institution.",
-        "note": ""
+        "note": "For major publishing houses, you may omit the information entirely or give simply the city. For small publishers, on the other hand, you can help the reader by giving the complete address."
     },
     "annote": {
         "description": "An annotation.",
@@ -9,7 +9,7 @@
     },
     "author": {
         "description": "The name(s) of the author(s), in BibTeX name format.",
-        "note": ""
+        "note": "This field should contain the complete author list for your entry. The names are separated by the word and, even if there are more than two authors. Each name can be written in two equivalent forms: Donald E. Knuth or Knuth, Donald E. Eddie van Halen or van Halen, Eddie The second form should be used for authors with more than two names, to differentiate between middle names and last names."
     },
     "booktitle": {
         "description": "Title of a book, part of which is being cited.",
@@ -17,11 +17,11 @@
     },
     "chapter": {
         "description": "A chapter (or section or whatever) number.",
-        "note": ""
+        "note": "It's an integer denoting the page number."
     },
     "crossref": {
         "description": "The database key of the entry being cross-referenced",
-        "note": ""
+        "note": "The database key of the entry being cross referenced."
     },
     "edition": {
         "description": "The edition of a book (e.g., \"Second\").",
@@ -33,15 +33,15 @@
     },
     "howpublished": {
         "description": "How something strange has been published.",
-        "note": ""
+        "note": "The first word should be capitalized."
     },
     "institution": {
         "description": "Institutuion sponsoring a technical report.",
-        "note": ""
+        "note": "It is the name of institution"
     },
     "journal": {
         "description": "Journal name. Abbrevations are provided for many journals.",
-        "note": ""
+        "note": "The name of a journal or magazine. The name of a journal can be abbreviated using a “string”. To define such string, use the string editor."
     },
     "key": {
         "description": "Used for alphabetizing, cross-referencing, and creating a label when the author and editor information is missing.",
@@ -61,7 +61,7 @@
     },
     "organization": {
         "description": "The organization that sponsors a conference or that publishes a manual.",
-        "note": ""
+        "note": "It is the name of organization that takes care of publishing the manual."
     },
     "pages": {
         "description": "One or more page numbers or range of numbers.",
@@ -69,11 +69,11 @@
     },
     "publisher": {
         "description": "The publisher's name.",
-        "note": ""
+        "note": "The name of the publisher."
     },
     "school": {
         "description": "The name of the school where the thesis was written.",
-        "note": ""
+        "note": "The name of school."
     },
     "series": {
         "description": "The name of a series or set of books.",
@@ -81,7 +81,7 @@
     },
     "title": {
         "description": "The work's title, typed as explained in",
-        "note": ""
+        "note": " The title of the work. The capitalization may depend on the bibliography style and on the language used. For words that have to be capitalized (such as a proper noun), enclose the word (or its first letter) in braces."
     },
     "type": {
         "description": "The type of a technical report(e.g., \"Research Note\").",

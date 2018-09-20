@@ -1,5 +1,5 @@
 /*
-	Created at: 18 Sep 2018, Wed
+	Created at: 18 Sep 2018, tue
 */
 
 const bibtex = require("../index");
@@ -8,7 +8,6 @@ const bib = new bibtex()
 
 const formCode = bib.getFormFor('article')
 
-// Pretty printing 
 console.log(formCode)
 
 /*

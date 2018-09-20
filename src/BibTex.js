@@ -8,6 +8,7 @@ const getEntryTypeFields = require('./getEntryTypeFields');
 const getEntryTypeDescription = require("./getEntryTypeDescription");
 const getEntryTypeFieldsDescription = require("./getEntryTypeFieldsDescription");
 const getFormFor = require("./getFormFor");
+const getFields = require("./getFields");
 // const fs = require('fs')
 
 class BibTeX {
@@ -20,6 +21,7 @@ class BibTeX {
 		this.entryTypeDescription = getEntryTypeDescription();
 		this.entryTypeFieldsDescription = getEntryTypeFieldsDescription();
 		this.getFormFor = getFormFor;
+		this.getFields = getFields;
 	}
 
 	// Getting all the entry types available in BibTeX
