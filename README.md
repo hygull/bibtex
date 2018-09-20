@@ -450,7 +450,7 @@ console.log(formCode);
 
 ### Example 6 - Get fields (standard fields)
 
-> Based on the crapped data from [http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote).
+> Based on the scrapped data from [http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote).
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -599,3 +599,4 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 
 + [http://help.jabref.org/en/Bibtex](http://help.jabref.org/en/Bibtex)
 
++ [https://en.wikipedia.org/wiki/BibTeX](https://en.wikipedia.org/wiki/BibTeX)
