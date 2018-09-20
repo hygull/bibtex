@@ -6,7 +6,7 @@ const bibtex = require("../index");
 
 const bib = new bibtex()
 
-const formCode = bib.getFields('article')
+const fields = bib.getFields('article')
 
 // Pretty printing 
-console.log(JSON.stringify(formCode, null, 4))
+console.log(JSON.stringify(fields, null, 4))
