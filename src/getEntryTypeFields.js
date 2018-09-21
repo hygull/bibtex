@@ -9,7 +9,7 @@ module.exports = function getEntryTypeFields() {
 			"optionalFields": ["volume", "number", "pages", "month", "note", "key"]
 		},
 		"book": {
-			"requiredFields": ["author(or)editor", "title", "publisher", "year"],
+			"requiredFields": ["author or editor", "title", "publisher", "year"],
 			"optionalFields": ["volume", "series", "address", "edition", "month", "note", "key"]
 		},
 		"booklet": {
@@ -21,7 +21,7 @@ module.exports = function getEntryTypeFields() {
 			"optionalFields": ["editor", "pages", "organization", "publisher", "address", "month", "note", "key"]
 		},
 		"inbook": {
-			"requiredFields": ["author(or)editor", "title", "chapter(or:and)pages", "publisher", "year"],
+			"requiredFields": ["author or editor", "title", "chapter or/and pages", "publisher", "year"],
 			"optionalFields": ["volume", "series", "address", "edition", "month", "note", "key"]
 		},
 		"incollection": {

@@ -448,7 +448,7 @@ console.log(formCode);
 */
 ```
 
-### Example 6 - Get fields (standard fields)
+### Example 7 - Get fields (standard fields)
 
 > Based on the scrapped data from [http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote).
 
