@@ -62,7 +62,7 @@ console.log(entryTypes);
   'unpublished' ]
 */
 ```
-:arrow_up: :arrow_up: [Back to top](#top)
+:arrow_up: [Back to top](#top)
 
 
 
