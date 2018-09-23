@@ -614,6 +614,80 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 ```
 [Back to top](#top)
 
+<h3 id="example8">Example 8 - </h3>
+
+> `getBibTeXTemplateFor()` takes 2 parameters where only first is required.
+>
+> Second parameter denotes the type of output to be obtained which is an
+> integer (default value: `1`).
+>
+> So `getBibTeXTemplateFor("book")` is similar to `getBibTeXTemplateFor("book", 1)`.
+>
+> Currently, there're only 3 formats available so format can take either of `1`/`2`/`3`
+
+```javascript
+const bibtex = require("@hygull/bibtex");
+
+const bib = new bibtex()
+
+const bibTeXTemplateForManual = bib.getBibTeXTemplateFor('manual'); 
+
+console.log(bibTeXTemplateForManual);
+
+/*
+    @manual{manualKey,
+            article = {""},
+            book = {""},
+            booklet = {""},
+            conference = {""},
+            inbook = {""},
+            incollection = {""},
+            inproceedings = {""},
+            manual = {""}
+    }
+*/
+```
+[Back to top](#top)
+
+```javascript
+const bibTeXTemplateForManual2 = bib.getBibTeXTemplateFor('manual', 2); 
+
+console.log(bibTeXTemplateForManual2);
+
+/*
+    @manual{manualKey,
+            article = "",
+            book = "",
+            booklet = "",
+            conference = "",
+            inbook = "",
+            incollection = "",
+            inproceedings = "",
+            manual = ""
+    }
+*/
+```
+[Back to top](#top)
+
+```javascript
+const bibTeXTemplateForManual3 = bib.getBibTeXTemplateFor('manual', 3); 
+
+console.log(bibTeXTemplateForManual3);
+/*
+    @manual{manualKey,
+            article = {},
+            book = {},
+            booklet = {},
+            conference = {},
+            inbook = {},
+            incollection = {},
+            inproceedings = {},
+            manual = {}
+    }
+*/
+```
+[Back to top](#top)
+
 **Note:** Do not foget to check this page if you're working with Latex, BibTeX etc.
 
 ### Reference links

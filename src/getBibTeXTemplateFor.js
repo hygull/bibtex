@@ -40,12 +40,12 @@ module.exports = function getBibTexTemplateFor(entryType, format=1) {
 		console.log(fields);
 
 		for(let index in fields) {
-			let key = entryTypes[index]; // 'article', 'inproceedings' etc.
+			let key = entryTypes[index]; // 'article', 'inproceedings', 'inbook' etc.
 			if(format === 1)
 				keyValues.push(util.format('\t%s = {""}', key));
 			else if(format === 2) 
 				keyValues.push(util.format('\t%s = ""', key));
-			else 
+			else // As index has already been validated before (These's no need to check => format===3)
 				keyValues.push(util.format('\t%s = {}', key));
 		}
 
