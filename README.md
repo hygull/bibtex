@@ -60,7 +60,8 @@ console.log(entryTypes);
   'unpublished' ]
 */
 ```
-:arrow_up: [Back to top](#top)
+:arrow_up: :arrow_up: [Back to top](#top)
+
 
 
 <h3 id="example2">Example 2 - Get all entry type with fields (required + optional)</h3>
@@ -106,7 +107,8 @@ console.log(JSON.stringify(bookEntryFields, null, 4));
   }
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
+
 
 
 <h3 id="example3">Example 3 - Get Specific entry type with fields (pass the name of entry type)</h3>
@@ -138,7 +140,8 @@ console.log(JSON.stringify(proceedingsEntryFields, null, 4));
 	}
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
+
 
 
 <h3 id="example4">Example 4 - Get little description about entry types</h3>
@@ -175,7 +178,8 @@ console.log(JSON.stringify(entryTypeDescription, null, 4));
 }
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
+
 
 
 <h3 id="example5">Example 5 - Get entry types, fields, description</h3>
@@ -409,7 +413,8 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
 }
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
+
 
 
 <h3 id="example6">Example 6 - Getting HTML Code (form) for a specific entry type</h3>
@@ -472,7 +477,8 @@ console.log(formCode);
 </form>
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
+
 
 <h3 id="example7">Example 7 - Get fields (standard fields)</h3>
 
@@ -612,7 +618,8 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 }
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
+
 
 <h3 id="example8">Example 8 - </h3>
 
@@ -647,7 +654,7 @@ console.log(bibTeXTemplateForManual);
     }
 */
 ```
-[Back to top](#top)
+
 
 ```javascript
 const bibTeXTemplateForManual2 = bib.getBibTeXTemplateFor('manual', 2); 
@@ -667,7 +674,6 @@ console.log(bibTeXTemplateForManual2);
     }
 */
 ```
-[Back to top](#top)
 
 ```javascript
 const bibTeXTemplateForManual3 = bib.getBibTeXTemplateFor('manual', 3); 
@@ -686,7 +692,8 @@ console.log(bibTeXTemplateForManual3);
     }
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
+
 
 **Note:** Do not foget to check this page if you're working with Latex, BibTeX etc.
 
@@ -701,3 +708,5 @@ console.log(bibTeXTemplateForManual3);
 + [http://help.jabref.org/en/Bibtex](http://help.jabref.org/en/Bibtex)
 
 + [https://en.wikipedia.org/wiki/BibTeX](https://en.wikipedia.org/wiki/BibTeX)
+
++ [BibteX - standard templates, https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates)
