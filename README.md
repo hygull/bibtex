@@ -1,4 +1,4 @@
-# bibtex
+<h1 id="top">bibtex</h1>
 
 Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
 
@@ -13,9 +13,19 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 | Local | `npm i @hygull/bibtex` |
 | Global | `npm i @hygull/bibtex -g` |
 
-Now, please have a look at the below examples.
+### Examples
 
-### Example 1 - Get all entry types
+[Example 1 - Get all entry types](#example1)
+[Example 2 - Get all entry type with fields (required + optional)](#example2)
+[Example 3 - Get Specific entry type with fields (pass the name of entry type) ](#example3)
+[Example 4 - Get little description about entry types ](#example4)
+[Example 5 - Get entry types, fields, description](#example5)
+[Example 6 - Getting HTML Code (form) for a specific entry type](#example6)
+[Example 7 - Get fields (standard fields)](#example7)
+
+> Now, please have a look at the below examples.
+
+<h3 id="example1">Example 1 - Get all entry types</h3>
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -44,8 +54,10 @@ console.log(entryTypes);
   'unpublished' ]
 */
 ```
+[Back to top](#top)
 
-### Example 2 - Get all entry type with fields (required + optional)
+
+<h3 id="example2">Example 2 - Get all entry type with fields (required + optional)</h3>
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -88,8 +100,10 @@ console.log(JSON.stringify(bookEntryFields, null, 4));
   }
 */
 ```
+[Back to top](#top)
 
-### Example 3 - Get Specific entry type with fields (pass the name of entry type) 
+
+<h3 id="example3">Example 3 - Get Specific entry type with fields (pass the name of entry type)</h3>
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -119,8 +133,10 @@ console.log(JSON.stringify(proceedingsEntryFields, null, 4));
 	}
 */
 ```
+[Back to top](#top)
 
-### Example 4 - Get little description about entry types 
+
+<h3 id="example4">Example 4 - Get little description about entry types</h3>
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -154,8 +170,10 @@ console.log(JSON.stringify(entryTypeDescription, null, 4));
 }
 */
 ```
+[Back to top](#top)
 
-### Example 5 - Get entry types, fields, description
+
+<h3 id="example5">Example 5 - Get entry types, fields, description</h3>
 
 > Based on the scrapped data (using Python 3) from [http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#article](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#article).
 
@@ -386,8 +404,10 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
 }
 */
 ```
+[Back to top](#top)
 
-### Example 6 - Getting HTML Code (form) for a specific entry type
+
+<h3 id="example6">Example 6 - Getting HTML Code (form) for a specific entry type</h3>
 
 > Bootstrap 3 form element (Inspired from [https://www.w3schools.com/bootstrap/bootstrap_forms.asp](https://www.w3schools.com/bootstrap/bootstrap_forms.asp)).
 >
@@ -447,8 +467,9 @@ console.log(formCode);
 </form>
 */
 ```
+[Back to top](#top)
 
-### Example 7 - Get fields (standard fields)
+<h3 id="example7">Example 7 - Get fields (standard fields)</h3>
 
 > Based on the scrapped data from [http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote).
 
@@ -586,6 +607,7 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 }
 */
 ```
+[Back to top](#top)
 
 **Note:** Do not foget to check this page if you're working with Latex, BibTeX etc.
 
