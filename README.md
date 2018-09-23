@@ -29,6 +29,8 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 
 [Example 7 - Get fields (standard fields)](#example7)
 
+[Example 7 - Get BibTeX template code for a specific entry type in 3 different formats](#example8)
+
 > Now, please have a look at the below examples.
 
 <h3 id="example1">Example 1 - Get all entry types</h3>
@@ -621,7 +623,7 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 :arrow_up: [Back to top](#top)
 
 
-<h3 id="example8">Example 8 - </h3>
+<h3 id="example8">Example 8 -  Get BibTeX template code for a specific entry type in 3 different formats</h3>
 
 > `getBibTeXTemplateFor()` takes 2 parameters where only first is required.
 >
