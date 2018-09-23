@@ -16,11 +16,17 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 ### Examples
 
 [Example 1 - Get all entry types](#example1)
+
 [Example 2 - Get all entry type with fields (required + optional)](#example2)
+
 [Example 3 - Get Specific entry type with fields (pass the name of entry type) ](#example3)
+
 [Example 4 - Get little description about entry types ](#example4)
+
 [Example 5 - Get entry types, fields, description](#example5)
+
 [Example 6 - Getting HTML Code (form) for a specific entry type](#example6)
+
 [Example 7 - Get fields (standard fields)](#example7)
 
 > Now, please have a look at the below examples.
@@ -54,7 +60,7 @@ console.log(entryTypes);
   'unpublished' ]
 */
 ```
-[Back to top](#top)
+:arrow_up: [Back to top](#top)
 
 
 <h3 id="example2">Example 2 - Get all entry type with fields (required + optional)</h3>
@@ -127,8 +133,7 @@ console.log(JSON.stringify(proceedingsEntryFields, null, 4));
 	        "organization",
 	        "address",
 	        "month",
-	        "note",
-	        "key"
+	        "note"
 	    ]
 	}
 */
