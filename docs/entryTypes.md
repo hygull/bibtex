@@ -7,11 +7,11 @@ Format:
               required_fields [, optional_fields] }
 Required fields: author, title, journal, year
 
-Optional fields: volume, number, pages, month, note, key
+Optional fields: volume, number, pages, month, note
 
 ```javascript
 	var requiredFields = ['author', 'title', 'journal', 'year']
-	var optionalFields = ['volume', 'number', 'pages', 'month', 'note', 'key']
+	var optionalFields = ['volume', 'number', 'pages', 'month', 'note']
 
 ```
 
@@ -24,11 +24,11 @@ Format:
            required_fields [, optional_fields] }
 Required fields: author or editor, title, publisher, year
 
-Optional fields: volume, series, address, edition, month, note, key
+Optional fields: volume, series, address, edition, month, note
 
 ```javascript
 	var requiredFields = ['author|editor', 'title', 'publisher', 'year']
-	var optionalFields = ['volume', 'series', 'address', 'edition', 'month', 'note', 'key']
+	var optionalFields = ['volume', 'series', 'address', 'edition', 'month', 'note']
 ```
 
 ## booklet entry
@@ -40,11 +40,11 @@ Format:
               required_fields [, optional_fields] }
 Required fields: title
 
-Optional fields: author, howpublished, address, month, year, note, key
+Optional fields: author, howpublished, address, month, year, note
 
 ```javascript
 	var requiredFields = ['title']
-	var optionalFields = ['author', 'howpublished', 'address', 'month', 'year', 'note', 'key']
+	var optionalFields = ['author', 'howpublished', 'address', 'month', 'year', 'note']
 ```
 
 ## conference entry
@@ -56,11 +56,11 @@ Format:
                  required_fields [, optional_fields] }
 Required fields: author, title, booktitle, year
 
-Optional fields: editor, pages, organization, publisher, address, month, note, key
+Optional fields: editor, pages, organization, publisher, address, month, note
 
 ```javascript
 	var requiredFields = ['author', 'title', 'booktitle', 'year']
-	var optionalFields = ['editor', 'pages', 'organization', 'publisher', 'address', 'month', 'note', 'key']
+	var optionalFields = ['editor', 'pages', 'organization', 'publisher', 'address', 'month', 'note']
 ```
 ## inbook entry
 A part of a book, which may be a chapter and/or a range of pages.
@@ -71,11 +71,11 @@ Format:
              required_fields [, optional_fields] }
 Required fields: author or editor, title, chapter and/or pages, publisher, year
 
-Optional fields: volume, series, address, edition, month, note, key
+Optional fields: volume, series, address, edition, month, note
 
 ```javascript
 	var requiredFields = ["author|editor", "title", "chapter(&|)pages", "publisher", "year"]
-	var optionalFields = ['volume', 'series', 'address', 'edition', 'month', 'note', 'key']
+	var optionalFields = ['volume', 'series', 'address', 'edition', 'month', 'note']
 ```
 ## incollection entry
 A part of a book with its own title.
@@ -86,11 +86,11 @@ Format:
                    required_fields [, optional_fields] }
 Required fields: author, title, booktitle, year
 
-Optional fields: editor, pages, organization, publisher, address, month, note, key
+Optional fields: editor, pages, organization, publisher, address, month, note
 
 ```javascript
 	var requiredFields = ['author', 'title', 'booktitle', 'year']
-	var optionalFields = ['editor', 'pages', 'organization', 'publisher', 'address', 'month', 'note', 'key']
+	var optionalFields = ['editor', 'pages', 'organization', 'publisher', 'address', 'month', 'note']
 ```
 ## inproceedings entry
 An article in the proceedings of a conference.
@@ -101,11 +101,11 @@ Format:
                     required_fields [, optional_fields] }
 Required fields: author, title, booktitle, year
 
-Optional fields: editor, pages, organization, publisher, address, month, note, key
+Optional fields: editor, pages, organization, publisher, address, month, note
 
 ```javascript
 	var requiredFields = ['author', 'title', 'booktitle', 'year']
-	var optionalFields = ['editor', 'pages', 'organization', 'publisher', 'address', 'month', 'note', 'key']
+	var optionalFields = ['editor', 'pages', 'organization', 'publisher', 'address', 'month', 'note']
 ```
 
 ## manual entry
@@ -117,11 +117,11 @@ Format:
              required_fields [, optional_fields] }
 Required fields: title
 
-Optional fields: author, organization, address, edition, month, year, note, key
+Optional fields: author, organization, address, edition, month, year, note
 
 ```javascript
 	var requiredFields = ['title']
-	var optionalFields = ['author', 'organization', 'address', 'edition', 'month', 'year', 'note', 'key']
+	var optionalFields = ['author', 'organization', 'address', 'edition', 'month', 'year', 'note']
 ```
 
 ## mastersthesis entry
@@ -133,11 +133,11 @@ Format:
                     required_fields [, optional_fields] }
 Required fields: author, title, school, year
 
-Optional fields: address, month, note, key
+Optional fields: address, month, note
 
 ```javascript
 	var requiredFields = ['author', 'title', 'school', 'year']
-	var optionalFields = ['address', 'month', 'note', 'key']
+	var optionalFields = ['address', 'month', 'note']
 ```
 
 ## misc entry
@@ -149,11 +149,11 @@ Format:
            required_fields [, optional_fields] }
 Required fields: none
 
-Optional fields: author, title, howpublished, month, year, note, key
+Optional fields: author, title, howpublished, month, year, note
 
 ```javascript
 	var requiredFields = [] // null
-	var optionalFields = ['author', 'title', 'howpublished', 'month', 'year', 'note', 'key']
+	var optionalFields = ['author', 'title', 'howpublished', 'month', 'year', 'note']
 ```
 
 ## phdthesis entry
@@ -165,11 +165,11 @@ Format:
                 required_fields [, optional_fields] }
 Required fields: author, title, school, year
 
-Optional fields: address, month, note, key
+Optional fields: address, month, note
 
 ```javascript
 	var requiredFields = ['author', 'title', 'school', 'year']
-	var optionalFields = ['address', 'month', 'note', 'key']
+	var optionalFields = ['address', 'month', 'note']
 ```
 
 ## proceedings entry
@@ -181,11 +181,11 @@ Format:
                   required_fields [, optional_fields] }
 Required fields: title, year
 
-Optional fields: editor, publisher, organization, address, month, note, key
+Optional fields: editor, publisher, organization, address, month, note
 
 ```javascript
 	var requiredFields = ['title', 'year']
-	var optionalFields = ['editor', 'publisher', 'organization', 'address', 'month', 'note', 'key']
+	var optionalFields = ['editor', 'publisher', 'organization', 'address', 'month', 'note']
 ```
 
 ## techreport entry
@@ -197,11 +197,11 @@ Format:
                  required_fields [, optional_fields] }
 Required fields: author, title, institution, year
 
-Optional fields: type, number, address, month, note, key
+Optional fields: type, number, address, month, note
 
 ```javascript
 	var requiredFields = ['author', 'title', 'institution', 'year']
-	var optionalFields = ['type', 'number', 'address', 'month', 'note', 'key']
+	var optionalFields = ['type', 'number', 'address', 'month', 'note']
 ```
 
 ## unpublished entry
@@ -213,9 +213,9 @@ Format:
                   required_fields [, optional_fields] }
 Required fields: author, title, note
 
-Optional fields: month, year, key
+Optional fields: month, year
 
 ```javascript
 	var requiredFields = ["author", "title", "note"]
-	var optionalFields = ["month", "year", "key"]
+	var optionalFields = ["month", "year"]
 ```

@@ -30,8 +30,6 @@ module.exports = function getFormFor(entryType) {
 	return formCode;
 }
 
-
-
 function getFormFieldsCode(fields, required) {
 	// Validation is not required
 	// It is being done inside the calling code

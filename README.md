@@ -29,7 +29,7 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 
 [Example 7 - Get fields (standard fields)](#example7)
 
-[Example 7 - Get BibTeX template code for a specific entry type in 3 different formats](#example8)
+[Example 8 - Get BibTeX template code for a specific entry type in 3 different formats](#example8)
 
 > Now, please have a look at the below examples.
 
@@ -62,7 +62,7 @@ console.log(entryTypes);
   'unpublished' ]
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 
@@ -109,7 +109,7 @@ console.log(JSON.stringify(bookEntryFields, null, 4));
   }
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 
@@ -142,7 +142,7 @@ console.log(JSON.stringify(proceedingsEntryFields, null, 4));
 	}
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 
@@ -180,7 +180,7 @@ console.log(JSON.stringify(entryTypeDescription, null, 4));
 }
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 
@@ -415,7 +415,7 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
 }
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 
@@ -479,7 +479,7 @@ console.log(formCode);
 </form>
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 <h3 id="example7">Example 7 - Get fields (standard fields)</h3>
@@ -620,7 +620,7 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 }
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 <h3 id="example8">Example 8 -  Get BibTeX template code for a specific entry type in 3 different formats</h3>
@@ -694,7 +694,7 @@ console.log(bibTeXTemplateForManual3);
     }
 */
 ```
-:arrow_up: [Back to top](#top)
+&raquo; [Back to top](#top)
 
 
 **Note:** Do not foget to check this page if you're working with Latex, BibTeX etc.
@@ -712,3 +712,5 @@ console.log(bibTeXTemplateForManual3);
 + [https://en.wikipedia.org/wiki/BibTeX](https://en.wikipedia.org/wiki/BibTeX)
 
 + [BibteX - standard templates, https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates)
+
++ [BibTeX examples (Imp.) - http://shelah.logic.at/eindex.html](http://shelah.logic.at/eindex.html)

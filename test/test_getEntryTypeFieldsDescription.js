@@ -15,13 +15,13 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
 {
     "article": {
         "description": "An article from a journal or magazine",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "journal",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "volume",
             "number",
             "pages",
@@ -31,13 +31,13 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
     },
     "book": {
         "description": "A book with an explicit publisher",
-        "required_fields": [
+        "requiredFields": [
             "author or editor",
             "title",
             "publisher",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "volume or number",
             "series",
             "address",
@@ -47,12 +47,12 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
         ]
     },
     "booklet": {
-        "description": "A work that is printed and bound, but without a 
-        named publisher or sponsoring institution",
-        "required_fields": [
+        "description": "A work that is printed and bound, but without a named publisher or sponsoring i
+nstitution",
+        "requiredFields": [
             "title"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "author",
             "howpublished",
             "address",
@@ -62,16 +62,16 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
         ]
     },
     "inbook": {
-        "description": "A part of a book, e.g., a chpater, section, or 
-        whatever and/or a range of pages",
-        "required_fields": [
+        "description": "A part of a book, e.g., a chpater, section, or whatever and/or a range of pages
+",
+        "requiredFields": [
             "author or editor",
             "title",
             "chapter and/or pages",
             "publisher",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "volume or number",
             "series",
             "type",
@@ -83,14 +83,14 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
     },
     "incollection": {
         "description": "A part of a book having its own title",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "booktitle",
             "publisher",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "editor",
             "volume or number",
             "series",
@@ -105,13 +105,13 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
     },
     "inproceedings": {
         "description": "An article in a conference proceedings",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "booktitle",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "editor",
             "volume or number",
             "series",
@@ -125,10 +125,10 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
     },
     "manual": {
         "description": "Technical documentation",
-        "required_fields": [
+        "requiredFields": [
             "title"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "author",
             "organization",
             "address",
@@ -140,13 +140,13 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
     },
     "mastersthesis": {
         "description": "A master's thesis",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "school",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "type",
             "address",
             "month",
@@ -154,13 +154,12 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
         ]
     },
     "misc": {
-        "description": "Use this type when nothing else fits. A warning 
-        will be issued if all optional fields are empty (i.e., the entire 
-        entry is empty or has only ignored fields)",
-        "required_fields": [
+        "description": "Use this type when nothing else fits. A warning will be issued if all optional
+fields are empty (i.e., the entire entry is empty or has only ignored fields)",
+        "requiredFields": [
             "none"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "author",
             "title",
             "howpublished",
@@ -171,13 +170,13 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
     },
     "phdthesis": {
         "description": "A Ph.D. thesis",
-        "required_fields": [
+        "requiredFields": [
             "author",
             "title",
             "school",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "type",
             "address",
             "month",
@@ -186,11 +185,11 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
     },
     "proceedings": {
         "description": "Conference proceedings",
-        "required_fields": [
+        "requiredFields": [
             "title",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "editor",
             "volume or number",
             "series",
@@ -202,15 +201,15 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
         ]
     },
     "techreport": {
-        "description": "A report published by a school or other institution, 
-        usually numbered within a series",
-        "required_fields": [
+        "description": "A report published by a school or other institution, usually numbered within a
+series",
+        "requiredFields": [
             "author",
             "title",
             "institution",
             "year"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "type",
             "number",
             "address",
@@ -219,14 +218,13 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
         ]
     },
     "unpublished": {
-        "description": "A document having an author and title, but not 
-        formally published",
-        "required_fields": [
+        "description": "A document having an author and title, but not formally published",
+        "requiredFields": [
             "author",
             "title",
             "note"
         ],
-        "optional_fields": [
+        "optionalFields": [
             "month",
             "year"
         ]

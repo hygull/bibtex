@@ -29,13 +29,13 @@ module.exports = function getBibTexTemplateFor(entryType, format=1) {
 		let output = '@' + entryType + "{" + entryType + 'Key' + ",\n";
 
 		let fields = [];
-		let requiredFields = entryTypeObj["requiredFields"]
-		let optionalFields = entryTypeObj["optionalFields"]
+		let requiredFields = entryTypeObj["requiredFields"];
+		let optionalFields = entryTypeObj["optionalFields"];
 		console.log(requiredFields);
 		console.log(optionalFields);
 
 		fields = fields.concat(requiredFields);
-		console.log(fields)
+		console.log(fields);
 		fields = fields.concat(optionalFields);
 		console.log(fields);
 
@@ -49,8 +49,8 @@ module.exports = function getBibTexTemplateFor(entryType, format=1) {
 				keyValues.push(util.format('\t%s = {}', key));
 		}
 
-		output += keyValues.join(',' + '\n')
-		output += "\n}"
+		output += keyValues.join(',' + '\n');
+		output += "\n}";
 		return output;
 	}
 }
