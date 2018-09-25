@@ -1,4 +1,8 @@
 const execFile = require("child_process").execFile;
+/***********
+execFile() should not be used in a case where the external application 
+generates a large amount of data.
+***********/
 
 // command: string, params: array, (error, stdout, stderr) => {}: function
 const child = execFile('node', ['--version'], function(error, stdout, stderr){

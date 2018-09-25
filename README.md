@@ -705,6 +705,8 @@ console.log(bibTeXTemplateForManual3);
 
 + [http://ctan.imsc.res.in/biblio/bibtex/base/xampl.bib](http://ctan.imsc.res.in/biblio/bibtex/base/xampl.bib)
 
++ [BibTeX format(MIT) - http://web.mit.edu/rsi/www/pdfs/bibtex-format.pdf](http://web.mit.edu/rsi/www/pdfs/bibtex-format.pdf)
+
 + [https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management)
 
 + [http://www.bibtex.org/Using/](http://www.bibtex.org/Using/)
