@@ -722,3 +722,5 @@ console.log(bibTeXTemplateForManual3);
 + [BibTeX examples (Imp.) - http://shelah.logic.at/eindex.html](http://shelah.logic.at/eindex.html)
 
 + [http://nokyotsu.com/latex/bibtex.html#manual (Imp.)](http://nokyotsu.com/latex/bibtex.html#manual)
+
++ [All supported Entry types & Entry fields - https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX](https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX)
