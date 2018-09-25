@@ -632,7 +632,7 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 >
 > So `getBibTeXTemplateFor("book")` is similar to `getBibTeXTemplateFor("book", 1)`.
 >
-> Currently, there're only 3 formats available so format can take either of `1`/`2`/`3`
+> Currently, there're only 3 formats available so format can take value of `1`/`2`/`3`
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -694,12 +694,16 @@ console.log(bibTeXTemplateForManual3);
     }
 */
 ```
-&raquo; [Back to top](#top)
 
+&raquo; [Back to top](#top)
 
 **Note:** Do not foget to check this page if you're working with Latex, BibTeX etc.
 
 ### Reference links
+
++ [Must read - http://www.bibtex.org/Format/](http://www.bibtex.org/Format/)
+
++ [http://ctan.imsc.res.in/biblio/bibtex/base/xampl.bib](http://ctan.imsc.res.in/biblio/bibtex/base/xampl.bib)
 
 + [https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management)
 
@@ -714,3 +718,5 @@ console.log(bibTeXTemplateForManual3);
 + [BibteX - standard templates, https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates)
 
 + [BibTeX examples (Imp.) - http://shelah.logic.at/eindex.html](http://shelah.logic.at/eindex.html)
+
++ [http://nokyotsu.com/latex/bibtex.html#manual (Imp.)](http://nokyotsu.com/latex/bibtex.html#manual)

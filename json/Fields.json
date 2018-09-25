@@ -89,11 +89,10 @@
     },
     "volume": {
         "description": "The volume of a journal or multivolume book.",
-        "note": ""
+        "note": "The volume of a journal."
     },
     "year": {
         "description": "The year of publication or, for an unpublished work, the year it was written.",
         "note": "Generally, it should consist of four numerals, such as 1984, although the standard styles can handle any year whose last four nonpunctuation characters are numerals, such as \"about 1984\"."
     }
 }
-
