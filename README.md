@@ -609,7 +609,7 @@ ilarly, for the inbook and incollection entry types you can get \"section 1.2\" 
     },
     "volume": {
         "description": "The volume of a journal or multivolume book.",
-        "note": ""
+        "note": "The volume of a journal or multivolume book"
     },
     "year": {
         "description": "The year of publication or, for an unpublished work, the year it was written.",
@@ -632,7 +632,7 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 >
 > So `getBibTeXTemplateFor("book")` is similar to `getBibTeXTemplateFor("book", 1)`.
 >
-> Currently, there're only 3 formats available so format can take value of `1`/`2`/`3`
+> Currently, there're only 3 formats available so format can take value of `1`/`2`/`3`.
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -706,6 +706,8 @@ console.log(bibTeXTemplateForManual3);
 + [http://ctan.imsc.res.in/biblio/bibtex/base/xampl.bib](http://ctan.imsc.res.in/biblio/bibtex/base/xampl.bib)
 
 + [BibTeX format(MIT) - http://web.mit.edu/rsi/www/pdfs/bibtex-format.pdf](http://web.mit.edu/rsi/www/pdfs/bibtex-format.pdf)
+
++ [Open source bibliography reference manager - http://www.jabref.org/](http://www.jabref.org/)
 
 + [https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management)
 

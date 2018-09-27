@@ -4,7 +4,7 @@
   "description": "Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  ",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": ".\\test\\run_tests.bat"
   },
   "repository": {
     "type": "git",

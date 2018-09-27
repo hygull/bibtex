@@ -86,7 +86,7 @@ module.exports = function getFields() {
 	    },
 	    "title": {
 	        "description": "The work's title, typed as explained in",
-	        "note": " The title of the work. The capitalization may depend on the bibliography style and on the language used. For words that have to be capitalized (such as a proper noun), enclose the word (or its first letter) in braces."
+	        "note": "The title of the work. The capitalization may depend on the bibliography style and on the language used. For words that have to be capitalized (such as a proper noun), enclose the word (or its first letter) in braces."
 	    },
 	    "type": {
 	        "description": "The type of a technical report(e.g., \"Research Note\").",
@@ -94,7 +94,7 @@ module.exports = function getFields() {
 	    },
 	    "volume": {
 	        "description": "The volume of a journal or multivolume book.",
-	        "note": ""
+	        "note": "The volume of a journal or multivolume book."
 	    },
 	    "year": {
 	        "description": "The year of publication or, for an unpublished work, the year it was written.",
