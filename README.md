@@ -701,6 +701,9 @@ console.log(bibTeXTemplateForManual3);
 
 <h3 id="example9">Example 9 - Get BibTeX (.bib) as an object</h3>
 
+> Check [Citing and referencing in LaTeX - using BibTeX (pdf)](https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/library/public/LaTeX-and-BibTeX-branded-jan-2016.pdf), it might be very useful to
+understand the standard structure of a Bib(.bib) file.
+>
 > **Note:** Currently, the code can only process the Bib(.bib) file 
 > with only 1 bib specification like any of the below 2 formats. Later
 > it will be extented to support processing the Bib file with multiple
@@ -718,7 +721,7 @@ or
        field2 = {value2}
     }
 
-Let suppose we have a file named [./docs/examples/BibTeX_example02_misc.bib](`BibTeX_example02_misc.bib`) with the following content.
+Let suppose we have a file named [`BibTeX_example02_misc.bib`](./docs/examples/BibTeX_example02_misc.bib) with the following content.
 
 > BibTeX_example02_misc.bib
 
@@ -766,7 +769,7 @@ console.log(JSON.stringify(bibObject, null, 4));
 */
 ```
 
-Now let's have a look at another example [./docs/examples/BibTeX_example08_book_diff.bib](`BibTeX_example08_book_diff.bib`) to get it's object form.
+Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](./docs/examples/BibTeX_example08_book_diff.bib) to get it's object form.
 
 ```bibtex
 @book{bookKey,
@@ -804,6 +807,8 @@ console.log(JSON.stringify(bibObject, null, 4));
 */
 ```
 
+&raquo; [Back to top](#top)
+
 **Note:** Do not forget to check this page if you're working with Latex, BibTeX etc.
 
 ### Reference links
@@ -833,3 +838,5 @@ console.log(JSON.stringify(bibObject, null, 4));
 + [http://nokyotsu.com/latex/bibtex.html#manual (Imp.)](http://nokyotsu.com/latex/bibtex.html#manual)
 
 + [All supported Entry types & Entry fields - https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX](https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX)
+
++ [Citing and referencing in LaTeX - using BibTeX (pdf)](https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/library/public/LaTeX-and-BibTeX-branded-jan-2016.pdf)
