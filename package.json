@@ -12,7 +12,8 @@
     "getEntryTypes": "node .\\test\\test_getEntryTypes.js",
     "getFields": "node .\\test\\test_getFields.js",
     "getFormFor": "node .\\test\\test_getFormFor.js",
-    "getSpecificEntryTypeFields": "node .\\test\\test_getSpecificEntryTypeFields.js"
+    "getSpecificEntryTypeFields": "node .\\test\\test_getSpecificEntryTypeFields.js",
+    "getBibAsObject": "node .\\test\\test_getBibAsObject.js"
   },
   "repository": {
     "type": "git",

@@ -31,6 +31,8 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 
 [Example 8 - Get BibTeX template code for a specific entry type in 3 different formats](#example8)
 
+[Example 9 - Get BibTeX (.bib) as an object](#example9)
+
 > Now, please have a look at the below examples.
 
 <h3 id="example1">Example 1 - Get all entry types</h3>
@@ -697,7 +699,112 @@ console.log(bibTeXTemplateForManual3);
 
 &raquo; [Back to top](#top)
 
-**Note:** Do not foget to check this page if you're working with Latex, BibTeX etc.
+<h3 id="example9">Example 9 - Get BibTeX (.bib) as an object</h3>
+
+> **Note:** Currently, the code can only process the Bib(.bib) file 
+> with only 1 bib specification like any of the below 2 formats. Later
+> it will be extented to support processing the Bib file with multiple
+> bib specifications.
+
+    @entryType{key,
+       field1 = "value1",
+       field2 = "value2"
+    }
+
+or
+
+    @entryType{key,
+       field1 = {value1},
+       field2 = {value2}
+    }
+
+Let suppose we have a file named [./docs/examples/BibTeX_example02_misc.bib](`BibTeX_example02_misc.bib`) with the following content.
+
+> BibTeX_example02_misc.bib
+
+```bibtex
+@misc{Nobody06,
+       author = "Nobody Jr",
+       title = "My Article",
+       year = "2006" }
+```
+
+Below is the code to read the above file and get it as an object.
+
+```javascript
+const bibtex = require("@hygull/bibtex");
+const bib = new bibtex();
+
+/* NOTE:
+    + Path should be related to the location from where we're running the command.
+
+    + As we supposed to execute this from the root of the package.
+
+    + That is why `.\\docs\\examples\\BibTeX_example02_misc.bib` is correct
+    
+    + not `..\\docs\\examples\\BibTeX_example02_misc.bib`.
+*/
+
+// Bib file path (Absoulte/Relative)
+// './docs/examples/BibTeX_example02_misc.bib'
+// '.\\docs\\examples\\BibTeX_example02_misc.bib' also works fine in Windows
+const bibObject = bib.getBibAsObject('./docs/examples/BibTeX_example02_misc.bib');
+// const  = bib.getBibMetaData('.\\docs\\examples\\BibTeX_example02_misc.bib');
+
+// Pretty print
+console.log(JSON.stringify(bibObject, null, 4));
+/*
+    {
+        "entryType": "misc",
+        "key": "Nobody06",
+        "data": {
+            "author ": "Nobody Jr",
+            "title ": "My Article",
+            "year ": 2006
+        }
+    }
+*/
+```
+
+Now let's have a look at another example [./docs/examples/BibTeX_example08_book_diff.bib](`BibTeX_example08_book_diff.bib`) to get it's object form.
+
+```bibtex
+@book{bookKey,
+    author = {I J Kuss},
+    title = {On the Importance of Kissing Up to Your Boss},
+    edition = {5},
+    publisher = {Dilbert Books},
+    address = {Cambridge MA},
+    year = {1995}
+}
+```
+
+And below is the code that reads and returns an object containing the details of input bib file.
+
+```javascript
+const bibtex = require("@hygull/bibtex");
+const bib = new bibtex();
+
+const bibObject = bib.getBibAsObject('./docs/examples/BibTeX_example08_book_diff.bib');
+console.log(JSON.stringify(bibObject, null, 4));
+
+/*
+    {
+        "entryType": "book",
+        "key": "bookKey",
+        "data": {
+            "author ": "I J Kuss",
+            "title ": "On the Importance of Kissing Up to Your Boss",
+            "edition ": 5,
+            "publisher ": "Dilbert Books",
+            "address ": "Cambridge MA",
+            "year ": 1995
+        }
+    }
+*/
+```
+
+**Note:** Do not forget to check this page if you're working with Latex, BibTeX etc.
 
 ### Reference links
 
@@ -726,4 +833,3 @@ console.log(bibTeXTemplateForManual3);
 + [http://nokyotsu.com/latex/bibtex.html#manual (Imp.)](http://nokyotsu.com/latex/bibtex.html#manual)
 
 + [All supported Entry types & Entry fields - https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX](https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX)
-
