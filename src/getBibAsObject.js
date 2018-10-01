@@ -7,6 +7,12 @@ module.exports = function getBibAsObject(bibFilePath) {
 
 	// console.log(fs.existsSync(bibFilePath));
 	// console.log(process.cwd());
+	// console.log(bibFilePath);
+	if(!((typeof bibFilePath === 'string') && /.+\.bib$/gi.test(bibFilePath))) {
+		console.log("Bad path: " + bibFilePath);
+		console.log('File format (name/extension) is bad, a bib file should end with .bib');
+		return null;
+	}
 
 	if(!fs.existsSync(bibFilePath)){
 		console.log("Path: " + bibFilePath + " does not exist");
