@@ -721,7 +721,7 @@ or
        field2 = {value2}
     }
 
-Let suppose we have a file named [`BibTeX_example02_misc.bib`](./docs/examples/BibTeX_example02_misc.bib) with the following content.
+Let suppose we have a file named [`BibTeX_example02_misc.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_example02_misc.bib) with the following content.
 
 > BibTeX_example02_misc.bib
 
@@ -769,7 +769,7 @@ console.log(JSON.stringify(bibObject, null, 4));
 */
 ```
 
-Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](./docs/examples/BibTeX_example08_book_diff.bib) to get it's object form.
+Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_example08_book_diff.bib) to get it's object form.
 
 ```bibtex
 @book{bookKey,
