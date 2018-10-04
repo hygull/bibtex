@@ -65,3 +65,4 @@ typings/
 *.mp3
 .DS_Store
 *.mp4
+getBibAsObject2.js

@@ -11,6 +11,7 @@ const getFormFor = require("./getFormFor");
 const getFields = require("./getFields");
 const getBibTeXTemplateFor = require("./getBibTeXTemplateFor");
 const getBibAsObject = require("./getBibAsObject");
+// const getBibAsObject2 = require("./getBibAsObject2");
 // const fs = require('fs')
 
 class BibTeX {
@@ -18,6 +19,13 @@ class BibTeX {
 	constructor() {
 		// this.entryTypes = fs.readFileSync('../json/entryTypes.json', 'utf-8')
 		// this.entryTypeFields = fs.readFileSync('../json/entryTypeFields.json', 'utf-8')
+		
+		/*
+			+----------------------+
+			|   ADD METHODS HERE   |
+			+----------------------+
+		*/
+
 		this.entryTypes = getEntryTypes();
 		this.entryTypeFields = getEntryTypeFields();
 		this.entryTypeDescription = getEntryTypeDescription();
@@ -26,6 +34,7 @@ class BibTeX {
 		this.getFields = getFields;
 		this.getBibTeXTemplateFor = getBibTeXTemplateFor;
 		this.getBibAsObject = getBibAsObject;
+		// this.getBibAsObject2 = getBibAsObject2;
 	}
 
 	// Getting all the entry types available in BibTeX

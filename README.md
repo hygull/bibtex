@@ -701,13 +701,8 @@ console.log(bibTeXTemplateForManual3);
 
 <h3 id="example9">Example 9 - Get BibTeX (.bib) as an object</h3>
 
-> Check [Citing and referencing in LaTeX - using BibTeX (pdf)](https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/library/public/LaTeX-and-BibTeX-branded-jan-2016.pdf), it might be very useful to
+> Check [Citing and referencing in LaTeX - using BibTeX (pdf)](https://gitlab.com/hygull/tech-pdfs/blob/master/latex/bibtex/Citing-And-References-in-LaTeX-BibTeX.pdf), it might be very useful to
 understand the standard structure of a Bib(.bib) file.
->
-> **Note:** Currently, the code can only process the Bib(.bib) file 
-> with only 1 bib specification like any of the below 2 formats. Later
-> it will be extented to support processing the Bib file with multiple
-> bib specifications.
 
     @entryType{key,
        field1 = "value1",
@@ -733,6 +728,8 @@ Let suppose we have a file named [`BibTeX_example02_misc.bib`](https://github.co
 ```
 
 Below is the code to read the above file and get it as an object.
+
+> #### 9.1 Single bib entry specification, (curley braced values)
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -769,12 +766,12 @@ console.log(JSON.stringify(bibObject, null, 4));
 */
 ```
 
-Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_example08_book_diff.bib) to get it's object form.
+Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_example08_book_diff.bib) to get its object form.
 
 ```bibtex
 @book{bookKey,
     author = {I J Kuss},
-    title = {On the Importance of Kissing Up to Your Boss},
+    title = {In the top of mountain in the world},
     edition = {5},
     publisher = {Dilbert Books},
     address = {Cambridge MA},
@@ -783,6 +780,8 @@ Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](http
 ```
 
 And below is the code that reads and returns an object containing the details of input bib file.
+
+> #### 9.2 Single bib entry specification, (double quoted values)
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -797,13 +796,124 @@ console.log(JSON.stringify(bibObject, null, 4));
         "key": "bookKey",
         "data": {
             "author ": "I J Kuss",
-            "title ": "On the Importance of Kissing Up to Your Boss",
+            "title ": "In the top of mountain in the world",
             "edition ": 5,
             "publisher ": "Dilbert Books",
             "address ": "Cambridge MA",
             "year ": 1995
         }
     }
+*/
+```
+
+&raquo; [Back to top](#top)
+
+Now, have a look at this another example [`BibTeX_multiple.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_multiple.bib) which have multiple bib
+entries, so here we're going to get an array of bib objects using the same method as we used above.
+
+```bibtex
+@Book{michael,
+    author = "Michael Jackson",
+    title = "My Kingdom For A Lollypop",
+    publisher = "Neverland \& Everland Publishing",
+    year = "2004"
+}
+
+@Book{elvis,
+    author = {Elvis Presley},
+    title = {Turn Me One More Time},
+    publisher = {Jail House Books},
+    year = {1963}
+}
+
+@Book{britney,
+    author = "Britn ey Spears",
+    title = "Let's Go Oversea To Canada",
+    publisher = "Blonde, Blondt \& Blondey",
+    year = "2007",
+}
+
+@Book{marilyn,
+    author = {Marilyn Manson},
+    title = {I Love My Little Pony},
+    publisher = {Pinc \& Cuddley Press},
+    year = {2005},
+}
+
+@Book{elvis,
+    author = "Elvis Presley",
+    title = "Turn Me One More Time",
+    publisher = "Jail House Books",
+    year = "1963"
+}
+```
+
+Below is the javascript code that reads the [`BibTeX_multiple.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_multiple.bib) 
+and returns an array of bib objects.
+
+> #### 9.3 - Multiple bib entries specification (get an array of bib objects)
+
+```javascript
+const bibtex = require("@hygull/bibtex");
+const bib = new bibtex();
+
+// Getting an array of bib objects
+const bibArr = bib.getBibAsObject('./docs/examples/BibTeX_multiple.bib');
+console.log(JSON.stringify(bibArr, null, 4));
+
+/*
+[
+    {
+        "entryType": "Book",
+        "key": "michael",
+        "data": {
+            "author ": "Michael Jackson",
+            "title ": "My Kingdom For A Lollypop",
+            "publisher ": "Neverland \\& Everland Publishing",
+            "year ": 2004
+        }
+    },
+    {
+        "entryType": "Book",
+        "key": "elvis",
+        "data": {
+            "author ": "Elvis Presley",
+            "title ": "Turn Me One More Time",
+            "publisher ": "Jail House Books",
+            "year ": 1963
+        }
+    },
+    {
+        "entryType": "Book",
+        "key": "britney",
+        "data": {
+            "author ": "Britn ey Spears",
+            "title ": "Let's Go Oversea To Canada",
+            "publisher ": "Blonde, Blondt \\& Blondey",
+            "year ": 2007
+        }
+    },
+    {
+        "entryType": "Book",
+        "key": "marilyn",
+        "data": {
+            "author ": "Marilyn Manson",
+            "title ": "I Love My Little Pony",
+            "publisher ": "Pinc \\& Cuddley Press",
+            "year ": 2005
+        }
+    },
+    {
+        "entryType": "Book",
+        "key": "elvis",
+        "data": {
+            "author ": "Elvis Presley",
+            "title ": "Turn Me One More Time",
+            "publisher ": "Jail House Books",
+            "year ": 1963
+        }
+    }
+]
 */
 ```
 
@@ -839,4 +949,6 @@ console.log(JSON.stringify(bibObject, null, 4));
 
 + [All supported Entry types & Entry fields - https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX](https://www.sharelatex.com/learn/latex/Bibliography_management_in_LaTeX)
 
-+ [Citing and referencing in LaTeX - using BibTeX (pdf)](https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/library/public/LaTeX-and-BibTeX-branded-jan-2016.pdf)
++ [Citing and referencing in LaTeX - using BibTeX (pdf)](https://gitlab.com/hygull/tech-pdfs/blob/master/latex/bibtex/Citing-And-References-in-LaTeX-BibTeX.pdf)
+
++ [Preparing Bibliographies using BIBTEX (Imp pdf)](https://gitlab.com/hygull/tech-pdfs/blob/master/latex/bibtex/Preparing-Bibliographies-using-BIBTEX.pdf)
