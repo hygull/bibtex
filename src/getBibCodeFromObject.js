@@ -9,7 +9,7 @@ module.exports = function getBibCodeFromObject(object, format=1) {
 
 	// To check the type of an object (using regular expression)
 	const type = Object.prototype.toString.call(object).slice(8,).replace(/\]$/, '');
-	let result; // Result
+	let result = ''; // Result
 
 	if(type === 'Object') { // object is an Object (Strict type check)
  		console.log('Got an object');
@@ -36,17 +36,32 @@ module.exports = function getBibCodeFromObject(object, format=1) {
 			for(const i = 0; i < object.length; i++) {
 				// Check for valid fields
 				if(fieldsAreOk(object[i])) {
-
+					// Contructing the content for a bib file
+					result = getCode(object[i])
 				}
 			}
+			return result; // Operation successful
 		} else { // Invalid object (Only allows Object/Array), { } 
 			return null;
 		}
 	}
-
-	return result; // Operation successful
 }
 
+function getCode(object) {
+	let result = '@' + object.entryType + '{' + object.key + ',\n';
+
+	const keyVals = [];
+
+	for(const key in object.data) {
+		let keyVal += '\t"' + key + '" = ';
+		keyVal += object["data"]["key"] + '\n';
+
+		keyVals.append(keyVal);
+	}
+
+	result += keyVal.join(',');
+	result += '}\n\n';
+}
 
 function fieldsAreOk(object) { 
 	// In case of arrays in calling code, this will be called again and again
@@ -119,20 +134,6 @@ function fieldsAreOk(object) {
 		}; 
 	}
 
-	// Contructing the content for a bib file
-	const bibFileContent = '@' + entryType + '{' + object.key + ',\n';
-	const keyVals = [];
-
-	for(const key in object.data) {
-		let keyVal += '\t"' + key + '" = ';
-		keyVal += object["data"]["key"] + '\n';
-
-		keyVals.append(keyVal);
-	}
-
-	bibFileContent += keyVal.join(',');
-	bibFileContent += '}';
-	
 	// Finally (Operation successful)
 	return true;
 }
