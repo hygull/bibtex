@@ -758,9 +758,9 @@ console.log(JSON.stringify(bibObject, null, 4));
         "entryType": "misc",
         "key": "Nobody06",
         "data": {
-            "author ": "Nobody Jr",
-            "title ": "My Article",
-            "year ": 2006
+            "author": "Nobody Jr",
+            "title": "My Article",
+            "year": 2006
         }
     }
 */
@@ -795,12 +795,12 @@ console.log(JSON.stringify(bibObject, null, 4));
         "entryType": "book",
         "key": "bookKey",
         "data": {
-            "author ": "I J Kuss",
-            "title ": "In the top of mountain in the world",
-            "edition ": 5,
-            "publisher ": "Dilbert Books",
-            "address ": "Cambridge MA",
-            "year ": 1995
+            "author": "I J Kuss",
+            "title": "In the top of mountain in the world",
+            "edition": 5,
+            "publisher": "Dilbert Books",
+            "address": "Cambridge MA",
+            "year": 1995
         }
     }
 */
@@ -867,50 +867,50 @@ console.log(JSON.stringify(bibArr, null, 4));
         "entryType": "Book",
         "key": "michael",
         "data": {
-            "author ": "Michael Jackson",
-            "title ": "My Kingdom For A Lollypop",
-            "publisher ": "Neverland \\& Everland Publishing",
-            "year ": 2004
+            "author": "Michael Jackson",
+            "title": "My Kingdom For A Lollypop",
+            "publisher": "Neverland \\& Everland Publishing",
+            "year": 2004
         }
     },
     {
         "entryType": "Book",
         "key": "elvis",
         "data": {
-            "author ": "Elvis Presley",
-            "title ": "Turn Me One More Time",
-            "publisher ": "Jail House Books",
-            "year ": 1963
+            "author": "Elvis Presley",
+            "title": "Turn Me One More Time",
+            "publisher": "Jail House Books",
+            "year": 1963
         }
     },
     {
         "entryType": "Book",
         "key": "britney",
         "data": {
-            "author ": "Britn ey Spears",
-            "title ": "Let's Go Oversea To Canada",
-            "publisher ": "Blonde, Blondt \\& Blondey",
-            "year ": 2007
+            "author": "Britn ey Spears",
+            "title": "Let's Go Oversea To Canada",
+            "publisher": "Blonde, Blondt \\& Blondey",
+            "year": 2007
         }
     },
     {
         "entryType": "Book",
         "key": "marilyn",
         "data": {
-            "author ": "Marilyn Manson",
-            "title ": "I Love My Little Pony",
-            "publisher ": "Pinc \\& Cuddley Press",
-            "year ": 2005
+            "author": "Marilyn Manson",
+            "title": "I Love My Little Pony",
+            "publisher": "Pinc \\& Cuddley Press",
+            "year": 2005
         }
     },
     {
         "entryType": "Book",
         "key": "elvis",
         "data": {
-            "author ": "Elvis Presley",
-            "title ": "Turn Me One More Time",
-            "publisher ": "Jail House Books",
-            "year ": 1963
+            "author": "Elvis Presley",
+            "title": "Turn Me One More Time",
+            "publisher": "Jail House Books",
+            "year": 1963
         }
     }
 ]
