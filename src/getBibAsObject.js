@@ -95,9 +95,9 @@ function getBibObj(data) {
 			let value = arr2[1].trim().replace(/["\}\{]/g, "").trim();
 
 			if(/^\d+$/g.test(value)) // If value is an integer
-				obj["data"][arr2[0]] = parseInt(value);
+				obj["data"][arr2[0].trim()] = parseInt(value);
 			else // otherwise
-				obj.data[arr2[0]] = value;
+				obj.data[arr2[0].trim()] = value;
 	});
 
 	// console.log(obj);

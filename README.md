@@ -567,7 +567,7 @@ at the beginning of the database entry."
     },
     "note": {
         "description": "Any additional information that can help the reader.",
-        "note": ""
+        "note": "Descriptive information to help the reader."
     },
     "number": {
         "description": "The number of a journal, magazine, technical report, or work in a series.",
