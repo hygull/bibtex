@@ -4,9 +4,9 @@
 
 const bibtex = require("../index");
 
-const bib = new bibtex()
+const bib = new bibtex();
 
-const proceedingsEntryFields = bib.getSpecificEntryTypeFields("proceedings")
+const proceedingsEntryFields = bib.getSpecificEntryTypeFields("proceedings");
 
 // Pretty printing (entry type: proceedings)
 console.log(JSON.stringify(proceedingsEntryFields, null, 4));

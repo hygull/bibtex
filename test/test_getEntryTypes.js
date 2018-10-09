@@ -4,6 +4,6 @@
 
 const bibtex = require("../index");
 
-const bib = new bibtex()
+const bib = new bibtex();
 
 console.log(bib.getEntryTypes());

@@ -4,9 +4,9 @@
 
 const bibtex = require("../index");
 
-const bib = new bibtex()
+const bib = new bibtex();
 
-const entryTypeFieldsDescription = bib.getEntryTypeFieldsDescription()
+const entryTypeFieldsDescription = bib.getEntryTypeFieldsDescription();
 
 // Pretty printing
 console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));

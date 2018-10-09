@@ -491,12 +491,12 @@ console.log(formCode);
 ```javascript
 const bibtex = require("@hygull/bibtex");
 
-const bib = new bibtex()
+const bib = new bibtex();
 
-const fields = bib.getFields('article')
+const fields = bib.getFields('article');
 
 // Pretty printing 
-console.log(JSON.stringify(fields, null, 4))
+console.log(JSON.stringify(fields, null, 4));
 
 /*
 {
@@ -639,7 +639,7 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 ```javascript
 const bibtex = require("@hygull/bibtex");
 
-const bib = new bibtex()
+const bib = new bibtex();
 
 const bibTeXTemplateForManual = bib.getBibTeXTemplateFor('manual'); 
 

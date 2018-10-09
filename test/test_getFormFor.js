@@ -4,11 +4,11 @@
 
 const bibtex = require("../index");
 
-const bib = new bibtex()
+const bib = new bibtex();
 
-const formCode = bib.getFormFor('article')
+const formCode = bib.getFormFor('article');
 
-console.log(formCode)
+console.log(formCode);
 
 /*
 <form action='#' method='GET' name='article'>
