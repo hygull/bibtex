@@ -31,7 +31,9 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 
 [Example 8 - Get BibTeX template code for a specific entry type in 3 different formats](#example8)
 
-[Example 9 - Get BibTeX (.bib) as an object](#example9)
+[Example 9 - Get object/array from BibTeX code (in .bib files)](#example9)
+
+[Example 10 - Get BibTeX code (for .bib files) from an object/array](#example10)
 
 > Now, please have a look at the below examples.
 
@@ -699,7 +701,7 @@ console.log(bibTeXTemplateForManual3);
 
 &raquo; [Back to top](#top)
 
-<h3 id="example9">Example 9 - Get BibTeX (.bib) as an object</h3>
+<h3 id="example9">Example 9 -  Get object/array from BibTeX code (in .bib files)</h3>
 
 > Check [Citing and referencing in LaTeX - using BibTeX (pdf)](https://gitlab.com/hygull/tech-pdfs/blob/master/latex/bibtex/Citing-And-References-in-LaTeX-BibTeX.pdf), it might be very useful to
 understand the standard structure of a Bib(.bib) file.
@@ -919,6 +921,35 @@ console.log(JSON.stringify(bibArr, null, 4));
 
 &raquo; [Back to top](#top)
 
+
+<h3 id="example10"> Get BibTeX code (for .bib files) from an object/array</h3>
+
+**Note** &raquo;
+
+> The function takes 2 parameters, 1st is required and 2nd is default parameter (with default value 2).
+>
+> 1st parameter denotes an object/array.
+>
+> 2nd parameter denotes the format of resulting BibTeX code that we wish to obtain.
+>
+>    - This function will only be called in case if
+>    The object in calling code is an array => [{...}, {...}, {...}, ...]
+>   
+>    - object in this function denotes any one of items available in the array
+>    - format will be either 1/2/3
+>    - 1 is for double quoted + curley braced representation => @article{articleKey,title={"The age of programming"}, ...}
+>    - 2 is for double quoted representation => @article{articleKey,title="The age of programming", ...}
+>    - 3 is for curley braced representation  => @article{articleKey,title={The age of programming}, ...}
+
+The below code explains the coversion process well with related outputs as comments.
+
+```javascript
+
+```
+
+&raquo; [Back to top](#top)
+
+
 **Note:** Do not forget to check this page if you're working with Latex, BibTeX etc.
 
 ### Reference links
@@ -955,3 +986,4 @@ console.log(JSON.stringify(bibArr, null, 4));
 
 + [http://www.bibtexsearch.com/](http://www.bibtexsearch.com/) - Visit and search for **bibtex**, **misc**, **article** etc. and you will see excellent examples related to bib.
 
++ [https://fileinfo.com/extension/bibtex](https://fileinfo.com/extension/bibtex)

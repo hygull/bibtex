@@ -5,7 +5,7 @@
 const getEntryTypes = require("./getEntryTypes");
 
 module.exports = function getBibCodeFromObject(object, format=3) {
-	console.log(object);
+	// console.log(object);
 
 	// To check the format (default is 2, double quoted representation)
 	if(!(format === 1 || format === 2 || format === 3)){
@@ -18,7 +18,7 @@ module.exports = function getBibCodeFromObject(object, format=3) {
 	let result = ''; // Result
 
 	if(type === 'Object') { // object is an Object (Strict type check)
- 		console.log('Got an object');
+ 		// console.log('Got an object');
 
  		// Check for valid fields
  		if(fieldsAreOk(object)) {
@@ -29,7 +29,7 @@ module.exports = function getBibCodeFromObject(object, format=3) {
  		}
 	} else { // Array or any other object (Excluding javascript Object)
 		if(type === 'Array') { // object is an Array (Strict type check), [{ }, { }, { }]
-			console.log('Got an array');
+			// console.log('Got an array');
 
 			if(!(object.length > 0)) {// object is an array here
 				console.log('Array is blank')
@@ -62,9 +62,9 @@ function getCode(object, format) {
 		
 		- object in this function denotes any one of items available in the array
 		- format will be either 1/2/3
-		- 1 is for double quoted representation => @article{articleKey,title={"The age of programming"}, ...}
+		- 1 is for double quoted + curley braced representation => @article{articleKey,title={"The age of programming"}, ...}
 		- 2 is for double quoted representation => @article{articleKey,title="The age of programming", ...}
-		- 3 is for double quoted + curley braced representation => @article{articleKey,title={The age of programming}, ...}
+		- 3 is for curley braced representation  => @article{articleKey,title={The age of programming}, ...}
 	*/
 	let result = '@' + object.entryType + '{' + object.key + ',\n';
 
@@ -74,7 +74,7 @@ function getCode(object, format) {
 		let keyVal = '';
 		let value = object["data"][key];
 
-		keyVal += '    "' + key + '" = ';  // 4 spaces
+		keyVal += '    ' + key + ' = ';  // 4 spaces
 		if(format === 1)
 			keyVal += '{"' + value + '"}'; // author = {"Raghvendra Thakur"}
 		else if(format === 2)
@@ -152,13 +152,13 @@ function fieldsAreOk(object) {
 	// then 
 	// check for existence of required fields for any specific entry type
 	const objectDataFields = Object.keys(object.data)
-	console.log(objectDataFields);
+	// console.log(objectDataFields);
 
 	const requiredFields = entryTypeFields['requiredFields'];
 	for(let i = 0; i < requiredFields.length; i++) {
 		if(!(objectDataFields.indexOf(requiredFields[i]) > -1)) { // If could not find the required field
 			let mixedEntries = requiredFields[i].split(/\s+/); // 'author or editor' => ['author', 'or', 'editor']
-			console.log(mixedEntries);
+			// console.log(mixedEntries);
 			
 			let found = false;
 			for(let mixedEntry of mixedEntries){
@@ -168,7 +168,7 @@ function fieldsAreOk(object) {
 					continue;
 				} else {
 					found = true;
-					break
+					break;
 				};
 			};
 

@@ -36,43 +36,23 @@ const arr = [
 	        }
 	    },
 	    {
-	        "entryType": "Book",
-	        "key": "elvis",
+	        "entryType": "techreport",
+	        "key": "techReportKey",
 	        "data": {
 	            "author": "Elvis Presley",
 	            "title": "Turn Me One More Time",
-	            "publisher": "Jail House Books",
+	            "institution": "Garry insitute of Badoda",
 	            "year": 1963
 	        }
 	    },
 	    {
-	        "entryType": "Book",
-	        "key": "britney",
+	        "entryType": "inproceedings",
+	        "key": "InProc",
 	        "data": {
 	            "author": "Britn ey Spears",
 	            "title": "Let's Go Oversea To Canada",
-	            "publisher": "Blonde, Blondt \\& Blondey",
+	            "booktitle": "Kiley brown's last word",
 	            "year": 2007
-	        }
-	    },
-	    {
-	        "entryType": "Book",
-	        "key": "marilyn",
-	        "data": {
-	            "editor": "Marilyn Manson",
-	            "title": "I Love My Little Pony",
-	            "publisher": "Pinc \\& Cuddley Press",
-	            "year": 2005
-	        }
-	    },
-	    {
-	        "entryType": "Book",
-	        "key": "elvis",
-	        "data": {
-	            "author": "Elvis Presley",
-	            "title": "Turn Me One More Time",
-	            "publisher": "Jail House Books",
-	            "year": 1963
 	        }
 	    }
 	];
