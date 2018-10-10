@@ -13,7 +13,8 @@
     "getFields": "node .\\test\\test_getFields.js",
     "getFormFor": "node .\\test\\test_getFormFor.js",
     "getSpecificEntryTypeFields": "node .\\test\\test_getSpecificEntryTypeFields.js",
-    "getBibAsObject": "node .\\test\\test_getBibAsObject.js"
+    "getBibAsObject": "node .\\test\\test_getBibAsObject.js",
+    "getBibCodeFromObject": "node .\\test\\test_getBibCodeFromObject.js"
   },
   "repository": {
     "type": "git",

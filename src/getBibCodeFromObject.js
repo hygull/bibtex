@@ -4,8 +4,14 @@
 
 const getEntryTypes = require("./getEntryTypes");
 
-module.exports = function getBibCodeFromObject(object, format=1) {
+module.exports = function getBibCodeFromObject(object, format=3) {
 	console.log(object);
+
+	// To check the format (default is 2, double quoted representation)
+	if(!(format === 1 || format === 2 || format === 3)){
+		console.log('The specified format can be either 1 or 2, got: ', format)
+		return null;
+	}
 
 	// To check the type of an object (using regular expression)
 	const type = Object.prototype.toString.call(object).slice(8,).replace(/\]$/, '');
@@ -16,7 +22,7 @@ module.exports = function getBibCodeFromObject(object, format=1) {
 
  		// Check for valid fields
  		if(fieldsAreOk(object)) {
-
+ 			result = getCode(object, format);
  		} else {
  			console.log('All fields are not OK');
  			return null;
@@ -25,42 +31,64 @@ module.exports = function getBibCodeFromObject(object, format=1) {
 		if(type === 'Array') { // object is an Array (Strict type check), [{ }, { }, { }]
 			console.log('Got an array');
 
-			if(object.length > 0) {// object is an array here
-
-			} else {
+			if(!(object.length > 0)) {// object is an array here
 				console.log('Array is blank')
 				return null;
 			}
 
 			// Loop through objects
-			for(const i = 0; i < object.length; i++) {
+			for(let i = 0; i < object.length; i++) {
 				// Check for valid fields
 				if(fieldsAreOk(object[i])) {
 					// Contructing the content for a bib file
-					result = getCode(object[i])
+					result += getCode(object[i], format)
+				} else {
+					return null;
 				}
 			}
-			return result; // Operation successful
+			// Done, return result
 		} else { // Invalid object (Only allows Object/Array), { } 
 			return null;
 		}
 	}
+
+	return result; // Operation successful
 }
 
-function getCode(object) {
+function getCode(object, format) {
+	/*
+		- This function will only be called in case if
+		  The object in calling code is an array => [{...}, {...}, {...}, ...]
+		
+		- object in this function denotes any one of items available in the array
+		- format will be either 1/2/3
+		- 1 is for double quoted representation => @article{articleKey,title={"The age of programming"}, ...}
+		- 2 is for double quoted representation => @article{articleKey,title="The age of programming", ...}
+		- 3 is for double quoted + curley braced representation => @article{articleKey,title={The age of programming}, ...}
+	*/
 	let result = '@' + object.entryType + '{' + object.key + ',\n';
 
 	const keyVals = [];
 
 	for(const key in object.data) {
-		let keyVal += '\t"' + key + '" = ';
-		keyVal += object["data"]["key"] + '\n';
+		let keyVal = '';
+		let value = object["data"][key];
 
-		keyVals.append(keyVal);
+		keyVal += '    "' + key + '" = ';  // 4 spaces
+		if(format === 1)
+			keyVal += '{"' + value + '"}'; // author = {"Raghvendra Thakur"}
+		else if(format === 2)
+			keyVal += '"' + value + '"';   // author = "Raghvendra Thakur" (Default)
+		else
+			keyVal += '{' + value + '}';   // author = {Raghvendra Thakur}
+
+		keyVals.push(keyVal);
 	}
 
-	result += keyVal.join(',');
-	result += '}\n\n';
+	result += keyVals.join(',\n');
+	result += '\n}\n\n';
+
+	return result;
 }
 
 function fieldsAreOk(object) { 
@@ -70,7 +98,7 @@ function fieldsAreOk(object) {
 			entryType: 'article', 
 			key: 'articleKey', 
 			data: {
-				'author': 'Om prakash',
+				'author': 'Rishi Dev',
 				'title': 'The final decision of an old monkey',
 				'year': 2007
 			}
@@ -84,7 +112,7 @@ function fieldsAreOk(object) {
 	}
 
 	const staticFields = ['entryType', 'key', 'data'];
-	for(const i = 0; i < staticFields.length; i++) {
+	for(let i = 0; i < staticFields.length; i++) {
 		if(!(fields.indexOf(staticFields[i]) > -1)) { // If dynamically obtained field is not ok
 			console.log('Object is missing ' + staticFields[i]);
 			return false;
@@ -127,16 +155,32 @@ function fieldsAreOk(object) {
 	console.log(objectDataFields);
 
 	const requiredFields = entryTypeFields['requiredFields'];
-	for(const i = 0; i < requiredFields.length; i++) {
+	for(let i = 0; i < requiredFields.length; i++) {
 		if(!(objectDataFields.indexOf(requiredFields[i]) > -1)) { // If could not find the required field
-			console.log(requiredFields[i] + ' is required field for Entry type: ' + entryType );
-			return false;
-		}; 
+			let mixedEntries = requiredFields[i].split(/\s+/); // 'author or editor' => ['author', 'or', 'editor']
+			console.log(mixedEntries);
+			
+			let found = false;
+			for(let mixedEntry of mixedEntries){
+				if(!(objectDataFields.indexOf(mixedEntry) > -1)) {
+					console.log(requiredFields[i] + ' is required field for Entry type: ' + entryType );
+					console.log('Double check for entry type is also failed');
+					continue;
+				} else {
+					found = true;
+					break
+				};
+			};
+
+			if(!found) {
+				return false;
+			}
+		}
 	}
 
-	// Finally (Operation successful)
+	// Finally (Operation successful, fields are ok)
 	return true;
-}
+};
 
 /*
 	EITHER {...} OR [{...}, {...}, {...}, ...]
@@ -233,7 +277,7 @@ function fieldsAreOk(object) {
 	        "entryType": "Book",
 	        "key": "marilyn",
 	        "data": {
-	            "author": "Marilyn Manson",
+	            "editor": "Marilyn Manson",
 	            "title": "I Love My Little Pony",
 	            "publisher": "Pinc \\& Cuddley Press",
 	            "year": 2005

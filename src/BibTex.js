@@ -1,7 +1,8 @@
 // https://nwalsh.com/tex/texhelp/bibtx-7.html
 // http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php
 //
-// Created: 14 Sep 2018, Fri
+// Programmed on: 14 Sep 2018, Fri
+// Updated on   : 10 Oct 2018, Wed
 
 const getEntryTypes = require('./getEntryTypes');
 const getEntryTypeFields = require('./getEntryTypeFields');
@@ -11,6 +12,7 @@ const getFormFor = require("./getFormFor");
 const getFields = require("./getFields");
 const getBibTeXTemplateFor = require("./getBibTeXTemplateFor");
 const getBibAsObject = require("./getBibAsObject");
+const getBibCodeFromObject = require("./getBibCodeFromObject");
 // const getBibAsObject2 = require("./getBibAsObject2");
 // const fs = require('fs')
 
@@ -34,6 +36,7 @@ class BibTeX {
 		this.getFields = getFields;
 		this.getBibTeXTemplateFor = getBibTeXTemplateFor;
 		this.getBibAsObject = getBibAsObject;
+		this.getBibCodeFromObject = getBibCodeFromObject;
 		// this.getBibAsObject2 = getBibAsObject2;
 	}
 

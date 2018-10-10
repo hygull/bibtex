@@ -952,3 +952,6 @@ console.log(JSON.stringify(bibArr, null, 4));
 + [Citing and referencing in LaTeX - using BibTeX (pdf)](https://gitlab.com/hygull/tech-pdfs/blob/master/latex/bibtex/Citing-And-References-in-LaTeX-BibTeX.pdf)
 
 + [Preparing Bibliographies using BIBTEX (Imp pdf)](https://gitlab.com/hygull/tech-pdfs/blob/master/latex/bibtex/Preparing-Bibliographies-using-BIBTEX.pdf)
+
++ [http://www.bibtexsearch.com/](http://www.bibtexsearch.com/) - Visit and search for **bibtex**, **misc**, **article** etc. and you will see excellent examples related to bib.
+
