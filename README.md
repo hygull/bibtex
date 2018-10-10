@@ -2,6 +2,8 @@
 
 Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
 
+![BibTeX](./docs/images/BibTeX.jpg)
+
 > You can also visit [https://hygull.github.io/bibtex/](https://hygull.github.io/bibtex/) to see the beautiful documentation for the same.
 
 ### Installation
@@ -921,6 +923,7 @@ console.log(JSON.stringify(bibArr, null, 4));
 
 &raquo; [Back to top](#top)
 
+![BibTeX](./docs/images/bibtex.png)
 
 <h3 id="example10"> Get BibTeX code (for .bib files) from an object/array</h3>
 
@@ -949,7 +952,7 @@ const bibtex = require("@hygull/bibtex");
 const bib = new bibtex();
 
 // EXAMPLE 1
-// Bib entry
+// BibTeX entry
 const object =  {
             entryType: 'article', 
             key: 'articleKey', 
@@ -977,7 +980,7 @@ Below is the code for conversion from an array of objects to BibTeX code.
 
 ```javascript
 // EXAMPLE 2
-// Array of bib entries
+// Array of BibTeX entries
 const arr = [
         {
             "entryType": "Book",
@@ -1078,3 +1081,5 @@ console.log(bibCode2);
 + [http://www.bibtexsearch.com/](http://www.bibtexsearch.com/) - Visit and search for **bibtex**, **misc**, **article** etc. and you will see excellent examples related to bib.
 
 + [https://fileinfo.com/extension/bibtex](https://fileinfo.com/extension/bibtex)
+
++ [https://verbosus.com/bibtex-style-examples.html?lang=en](https://verbosus.com/bibtex-style-examples.html?lang=en)
