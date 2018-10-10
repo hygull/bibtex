@@ -944,7 +944,98 @@ console.log(JSON.stringify(bibArr, null, 4));
 The below code explains the coversion process well with related outputs as comments.
 
 ```javascript
+const bibtex = require("@hygull/bibtex");
 
+const bib = new bibtex();
+
+// EXAMPLE 1
+// Bib entry
+const object =  {
+            entryType: 'article', 
+            key: 'articleKey', 
+            data: {
+                'author': 'Raghvendra Thakur',
+                'title': 'The final decision of an old monkey',
+                'year': 2007,
+                'journal': 'Annals of Mathematical Logic'
+            }
+        };
+
+const bibCode = bib.getBibCodeFromObject(object);
+console.log(bibCode);
+/*
+    @article{articleKey,
+        author = {Raghvendra Thakur},
+        title = {The final decision of an old monkey},
+        year = {2007},
+        journal = {Annals of Mathematical Logic}
+    }   
+*/
+```
+
+Below is the code for conversion from an array of objects to BibTeX code.
+
+```javascript
+// EXAMPLE 2
+// Array of bib entries
+const arr = [
+        {
+            "entryType": "Book",
+            "key": "michael",
+            "data": {
+                "author": "Michael Jackson",
+                "title": "My Kingdom For A Lollypop",
+                "publisher": "Neverland \\& Everland Publishing",
+                "year": 2004
+            }
+        },
+        {
+            "entryType": "techreport",
+            "key": "techReportKey",
+            "data": {
+                "author": "Elvis Presley",
+                "title": "Turn Me One More Time",
+                "institution": "Garry insitute of Badoda",
+                "year": 1963
+            }
+        },
+        {
+            "entryType": "inproceedings",
+            "key": "InProc",
+            "data": {
+                "author": "Britn ey Spears",
+                "title": "Let's Go Oversea To Canada",
+                "booktitle": "Kiley brown's last word",
+                "year": 2007
+            }
+        }
+    ];
+
+const bibCode2 = bib.getBibCodeFromObject(arr);
+console.log(bibCode2);
+
+/*
+    @Book{michael,
+        author = {Michael Jackson},
+        title = {My Kingdom For A Lollypop},
+        publisher = {Neverland \& Everland Publishing},
+        year = {2004}
+    }
+
+    @techreport{techReportKey,
+        author = {Elvis Presley},
+        title = {Turn Me One More Time},
+        institution = {Garry insitute of Badoda},
+        year = {1963}
+    }
+
+    @inproceedings{InProc,
+        author = {Britn ey Spears},
+        title = {Let's Go Oversea To Canada},
+        booktitle = {Kiley brown's last word},
+        year = {2007}
+    }
+*/
 ```
 
 &raquo; [Back to top](#top)
