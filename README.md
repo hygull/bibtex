@@ -2,9 +2,9 @@
 
 Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
 
-![BibTeX](./docs/images/BibTeX.jpg)
-
 > You can also visit [https://hygull.github.io/bibtex/](https://hygull.github.io/bibtex/) to see the beautiful documentation for the same.
+
+![BibTeX](./docs/images/BibTeX.jpg)
 
 ### Installation
 
@@ -926,8 +926,6 @@ console.log(JSON.stringify(bibArr, null, 4));
 ![BibTeX](./docs/images/bibtex.png)
 
 <h3 id="example10"> Get BibTeX code (for .bib files) from an object/array</h3>
-
-**Note** &raquo;
 
 > The function takes 2 parameters, 1st is required and 2nd is default parameter (with default value 2).
 >
