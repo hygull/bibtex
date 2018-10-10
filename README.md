@@ -4,7 +4,7 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 
 > You can also visit [https://hygull.github.io/bibtex/](https://hygull.github.io/bibtex/) to see the beautiful documentation for the same.
 
-![BibTeX](./docs/images/BibTeX.jpg)
+![BibTeX](https://raw.githubusercontent.com/hygull/bibtex/master/docs/images/BibTeX.jpg)
 
 ### Installation
 
@@ -923,7 +923,7 @@ console.log(JSON.stringify(bibArr, null, 4));
 
 &raquo; [Back to top](#top)
 
-![BibTeX](./docs/images/bibtex.png)
+![BibTeX](https://raw.githubusercontent.com/hygull/bibtex/master/docs/images/bibtex.png)
 
 <h3 id="example10"> Get BibTeX code (for .bib files) from an object/array</h3>
 
