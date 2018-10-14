@@ -57,5 +57,5 @@ const arr = [
 	    }
 	];
 
-const bibCode2 = bib.getBibCodeFromObject(arr);
+const bibCode2 = bib.getBibCodeFromObject(arr, 3);
 console.log(bibCode2)

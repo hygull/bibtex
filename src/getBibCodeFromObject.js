@@ -4,7 +4,7 @@
 
 const getEntryTypes = require("./getEntryTypes");
 
-module.exports = function getBibCodeFromObject(object, format=3) {
+module.exports = function getBibCodeFromObject(object, format=2) {
 	// console.log(object);
 
 	// To check the format (default is 2, double quoted representation)
@@ -77,10 +77,10 @@ function getCode(object, format) {
 		keyVal += '    ' + key + ' = ';  // 4 spaces
 		if(format === 1)
 			keyVal += '{"' + value + '"}'; // author = {"Raghvendra Thakur"}
-		else if(format === 2)
-			keyVal += '"' + value + '"';   // author = "Raghvendra Thakur" (Default)
+		else if(format === 3)
+			keyVal += '{' + value + '}';   // author = {Raghvendra Thakur} (Default)
 		else
-			keyVal += '{' + value + '}';   // author = {Raghvendra Thakur}
+			keyVal += '"' + value + '"';   // author = "Raghvendra Thakur"
 
 		keyVals.push(keyVal);
 	}
@@ -161,7 +161,7 @@ function fieldsAreOk(object) {
 			// console.log(mixedEntries);
 			
 			let found = false;
-			for(let mixedEntry of mixedEntries){
+			for(let mixedEntry of mixedEntries) {
 				if(!(objectDataFields.indexOf(mixedEntry) > -1)) {
 					console.log(requiredFields[i] + ' is required field for Entry type: ' + entryType );
 					console.log('Double check for entry type is also failed');

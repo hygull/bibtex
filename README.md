@@ -753,7 +753,7 @@ const bib = new bibtex();
 // './docs/examples/BibTeX_example02_misc.bib'
 // '.\\docs\\examples\\BibTeX_example02_misc.bib' also works fine in Windows
 const bibObject = bib.getBibAsObject('./docs/examples/BibTeX_example02_misc.bib');
-// const  = bib.getBibMetaData('.\\docs\\examples\\BibTeX_example02_misc.bib');
+// const bibObject = bib.getBibMetaData('.\\docs\\examples\\BibTeX_example02_misc.bib');
 
 // Pretty print
 console.log(JSON.stringify(bibObject, null, 4));
@@ -962,14 +962,14 @@ const object =  {
             }
         };
 
-const bibCode = bib.getBibCodeFromObject(object);
+const bibCode = bib.getBibCodeFromObject(object); // Default format 2 will be used (for double quoted representation)
 console.log(bibCode);
 /*
     @article{articleKey,
-        author = {Raghvendra Thakur},
-        title = {The final decision of an old monkey},
-        year = {2007},
-        journal = {Annals of Mathematical Logic}
+        author = "Raghvendra Thakur",
+        title = "The final decision of an old monkey",
+        year = "2007",
+        journal = "Annals of Mathematical Logic"
     }   
 */
 ```
@@ -1012,7 +1012,7 @@ const arr = [
         }
     ];
 
-const bibCode2 = bib.getBibCodeFromObject(arr);
+const bibCode2 = bib.getBibCodeFromObject(arr, 3); // format is 3 here (for curley braced representaion)
 console.log(bibCode2);
 
 /*
