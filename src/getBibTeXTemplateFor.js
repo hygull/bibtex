@@ -31,13 +31,13 @@ module.exports = function getBibTexTemplateFor(entryType, format=1) {
 		let fields = [];
 		let requiredFields = entryTypeObj["requiredFields"];
 		let optionalFields = entryTypeObj["optionalFields"];
-		console.log(requiredFields);
-		console.log(optionalFields);
+		// console.log(requiredFields);
+		// console.log(optionalFields);
 
 		fields = fields.concat(requiredFields);
-		console.log(fields);
+		// console.log(fields);
 		fields = fields.concat(optionalFields);
-		console.log(fields);
+		// console.log(fields);
 
 		for(let index in fields) {
 			let key = entryTypes[index]; // 'article', 'inproceedings', 'inbook' etc.

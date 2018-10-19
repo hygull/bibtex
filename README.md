@@ -6,16 +6,18 @@ Get details about BibTeX (.bib) syntax, available ENTRY types and many more usin
 
 ![BibTeX](https://raw.githubusercontent.com/hygull/bibtex/master/docs/images/BibTeX.jpg)
 
-### Installation
+## Installation
 
 > You can check [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json) for more commands.
 
-| Installation type | Command |
+| Type | Command |
 | --- | --- |
 | Local | `npm i @hygull/bibtex` |
 | Global | `npm i @hygull/bibtex -g` |
 
-### Examples
+If you want to try this package and getting started soon without any problems, please visit [https://hygull.github.io/bibtex-test/](https://hygull.github.io/bibtex-test/) and follow the steps mentioned.
+
+## Examples
 
 [Example 1 - Get all entry types](#example1)
 
@@ -733,7 +735,7 @@ Let suppose we have a file named [`BibTeX_example02_misc.bib`](https://github.co
 
 Below is the code to read the above file and get it as an object.
 
-> #### 9.1 Single bib entry specification, (curley braced values)
+> #### 9.1 Single bib entry specification, (curley braced representation)
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -769,7 +771,7 @@ console.log(JSON.stringify(bibObject, null, 4));
     }
 */
 ```
-
+===
 Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_example08_book_diff.bib) to get its object form.
 
 ```bibtex
@@ -785,7 +787,7 @@ Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](http
 
 And below is the code that reads and returns an object containing the details of input bib file.
 
-> #### 9.2 Single bib entry specification, (double quoted values)
+> #### 9.2 Single bib entry specification, (double quoted representation)
 
 ```javascript
 const bibtex = require("@hygull/bibtex");
@@ -811,6 +813,8 @@ console.log(JSON.stringify(bibObject, null, 4));
 ```
 
 &raquo; [Back to top](#top)
+
+===
 
 Now, have a look at this another example [`BibTeX_multiple.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_multiple.bib) which have multiple bib
 entries, so here we're going to get an array of bib objects using the same method as we used above.
@@ -1081,3 +1085,5 @@ console.log(bibCode2);
 + [https://fileinfo.com/extension/bibtex](https://fileinfo.com/extension/bibtex)
 
 + [https://verbosus.com/bibtex-style-examples.html?lang=en](https://verbosus.com/bibtex-style-examples.html?lang=en)
+
++ Producing a document with bibliography - [https://www.stat.berkeley.edu/~spector/bibtex.pdf](https://www.stat.berkeley.edu/~spector/bibtex.pdf)
