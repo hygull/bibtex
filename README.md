@@ -771,7 +771,7 @@ console.log(JSON.stringify(bibObject, null, 4));
     }
 */
 ```
-===
+
 Now let's have a look at another example [`BibTeX_example08_book_diff.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_example08_book_diff.bib) to get its object form.
 
 ```bibtex
@@ -814,7 +814,6 @@ console.log(JSON.stringify(bibObject, null, 4));
 
 &raquo; [Back to top](#top)
 
-===
 
 Now, have a look at this another example [`BibTeX_multiple.bib`](https://github.com/hygull/bibtex/blob/master/docs/examples/BibTeX_multiple.bib) which have multiple bib
 entries, so here we're going to get an array of bib objects using the same method as we used above.
