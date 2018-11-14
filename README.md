@@ -2,8 +2,6 @@
 
 Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
 
-![BibTeX](https://gitlab.com/hygull/bibtex/blob/master/docs/images/BibTeX.jpg)
-
 ## Examples
 
 [Example 1 - Get all entry types](#example1)
