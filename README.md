@@ -2,7 +2,7 @@
 
 Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
 
-![BibTeX](./docs/images/BibTeX.png)
+![BibTeX](https://gitlab.com/hygull/bibtex/blob/master/docs/images/BibTeX.jpg)
 
 ## Examples
 
