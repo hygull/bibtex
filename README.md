@@ -2,20 +2,8 @@
 
 Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
 
-> You can also visit [https://hygull.github.io/bibtex/](https://hygull.github.io/bibtex/) to see the beautiful documentation for the same.
 
 ![BibTeX](https://raw.githubusercontent.com/hygull/bibtex/master/docs/images/BibTeX.jpg)
-
-## Installation
-
-> You can check [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json) for more commands.
-
-| Type | Command |
-| --- | --- |
-| Local | `npm i @hygull/bibtex` |
-| Global | `npm i @hygull/bibtex -g` |
-
-If you want to try this package and getting started soon without any problems, please visit [https://hygull.github.io/bibtex-test/](https://hygull.github.io/bibtex-test/) and follow the steps mentioned.
 
 ## Examples
 
