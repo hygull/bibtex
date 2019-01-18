@@ -28,7 +28,7 @@ console.log(bibTeXTemplateForManual2);
 
 /*
     @manual{manualKey,
-        article = "",
+        article = "", 
         book = "",
         booklet = "",
         conference = "",

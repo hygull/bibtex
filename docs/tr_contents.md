@@ -8,14 +8,12 @@ lume, number, pages, month, note.</p>
 2
 [<td><a name="book"></a>
 <a href="#TOP" title="up">book</a></td>, <td> <p class="def">A book with an explicit publisher. </p><p
-class="req">Required fields: author or editor, title, publisher, year. </p><p class="opt">Optional fiel
-ds: volume or number, series, address, edition, month, note.</p>
+class="req">Required fields: author or editor, title, publisher, year. </p><p class="opt">Optional fields: volume or number, series, address, edition, month, note.</p>
 </td>]
 2
 [<td><a name="booklet"></a>
 <a href="#TOP" title="up">booklet</a></td>, <td> <p class="def">A work that is printed and bound, but w
-ithout a named publisher or sponsoring institution. </p><p class="req">Required: title. </p><p class="o
-pt">Optional: author, howpublished, address, month, year, note.</p>
+ithout a named publisher or sponsoring institution. </p><p class="req">Required: title. </p><p class="opt">Optional: author, howpublished, address, month, year, note.</p>
 </td>]
 2
 [<td><a name="inbook"></a>

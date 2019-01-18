@@ -39,15 +39,13 @@ d fields). </p><p class="req">Required fields: none. </p><p class="opt">Optional
  howpublished, month, year, note.</p>
 </td></tr>, <tr><td><a name="phdthesis"></a>
 <a href="#TOP" title="up">phdthesis</a></td><td> <p class="def">A Ph.D. thesis. </p><p class="req">Requ
-ired fields: author, title, school, year. </p><p class="opt">Optional fields: type, address, month, not
-e.</p>
+ired fields: author, title, school, year. </p><p class="opt">Optional fields: type, address, month, note.</p>
 </td></tr>, <tr><td><a name="proceedings"></a>
 <a href="#TOP" title="up">proceedings</a></td><td> <p class="def">Conference proceedings. </p><p class=
 "req">Required fields: title, year. </p><p class="opt">Optional fields: editor, volume or number, serie
 s, address, publisher, note, month, organization.</p>
 </td></tr>, <tr><td><a name="techreport"></a>
-<a href="#TOP" title="up">techreport</a></td><td> <p class="def">A report published by a school or othe
-r institution, usually numbered within a series. </p><p class="req">Required fields: author, title, ins
+<a href="#TOP" title="up">techreport</a></td><td> <p class="def">A report published by a school or other institution, usually numbered within a series. </p><p class="req">Required fields: author, title, ins
 titution, year. </p><p class="opt">Optional fields: type, number, address, month, note.</p>
 </td></tr>, <tr><td><a name="unpublished"></a>
 <a href="#TOP" title="up">unpublished</a></td><td> <p class="def">A document having an author and title
