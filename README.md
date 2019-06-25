@@ -1,6 +1,40 @@
 <h1 id="top">bibtex</h1>
 
-Get details about BibTeX (.bib) syntax, available ENTRY types and many more using Node APIs.  
+A node/npm package to get details about BibTeX (.bib), its syntax, available ENTRY types and many more using Node APIs.
+
+
+> You can also visit https://hygull.github.io/bibtex/ to see the beautiful documentation for the same.
+
+![https://raw.githubusercontent.com/hygull/bibtex/master/docs/images/BibTeX.jpg](https://raw.githubusercontent.com/hygull/bibtex/master/docs/images/BibTeX.jpg)
+
+## Installation
+
+> You can check https://docs.npmjs.com/getting-started/using-a-package.json for more commands.
+
+| Type   | Command |
+| --- | --- |
+| Local   | npm i @hygull/bibtex |
+| Global  | npm i @hygull/bibtex -g |
+
+If you want to try this package and getting started soon without any problems, please visit [https://hygull.github.io/bibtex-test/](https://hygull.github.io/bibtex-test/) and follow the steps mentioned.
+
+<hr>
+
+### What is BibTeX?
+
+BibTeX is a reference management program that makes it easy for users of TeX and LaTeX to generate bibliographies for books and journal articles. When possible, it is usually stylized in the TeX font the way TeX and LaTeX are. LaTeX was first created in 1985 by Leslie Lamport and Oren Patashnik.
+
+### What is a BibTeX key?
+
+A BibTeX key is a unique identifier for a reference in a BibTeX file. To cite a reference in a TeX document, you insert the BibTeX key for the reference in the correct place in the document. When the document is converted to its final output format, the BibTeX keys are replaced with the correct, formatted citations.
+
+### What is BibTex file?
+
+Document containing information in the BibTeX format; contains one or more references and enables bibliographies to be searched and published using standard commands.
+
+BibTeX files may include bibliographies for books, articles, research papers, tech reports, etc. The information in the file includes author name, title, journal, volume, year of publication, number of pages, and notes.
+
+<hr>
 
 ## Examples
 
