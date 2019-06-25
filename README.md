@@ -16,7 +16,7 @@ A node/npm package to get details about BibTeX (.bib), its syntax, available ENT
 | Local   | npm i @hygull/bibtex |
 | Global  | npm i @hygull/bibtex -g |
 
-If you want to try this package and getting started soon without any problems, please visit [https://hygull.github.io/bibtex-test/](https://hygull.github.io/bibtex-test/) and follow the steps mentioned.
+<!-- If you want to try this package and getting started soon without any problems, please visit [https://hygull.github.io/bibtex-test/](https://hygull.github.io/bibtex-test/) and follow the steps mentioned. -->
 
 <hr>
 
