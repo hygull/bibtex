@@ -2,6 +2,8 @@
 
 ![npm](https://img.shields.io/npm/dw/@hygull/bibtex.svg?label=downloads) ![npm (scoped)](https://img.shields.io/npm/v/@hygull/bibtex.svg?label=%40hygull%2Fbibtex)
 
+> ## `npm i @hygull/bibtex`
+
 A node/npm package to get details about BibTeX (.bib), its syntax, available ENTRY types and many more using Node APIs.
 
 
@@ -15,8 +17,8 @@ A node/npm package to get details about BibTeX (.bib), its syntax, available ENT
 
 | Type   | Command |
 | --- | --- |
-| Local   | npm i @hygull/bibtex |
-| Global  | npm i @hygull/bibtex -g |
+| Local   | `npm i @hygull/bibtex` |
+| Global  | `npm i @hygull/bibtex -g` |
 
 <!-- If you want to try this package and getting started soon without any problems, please visit [https://hygull.github.io/bibtex-test/](https://hygull.github.io/bibtex-test/) and follow the steps mentioned. -->
 
