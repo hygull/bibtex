@@ -1,5 +1,7 @@
 <h1 id="top">bibtex</h1>
 
+![npm](https://img.shields.io/npm/dw/@hygull/bibtex.svg?label=downloads) ![npm (scoped)](https://img.shields.io/npm/v/@hygull/bibtex.svg?label=%40hygull%2Fbibtex)
+
 A node/npm package to get details about BibTeX (.bib), its syntax, available ENTRY types and many more using Node APIs.
 
 
