@@ -67,7 +67,7 @@ BibTeX files may include bibliographies for books, articles, research papers, te
 <h3 id="example1">Example 1 - Get all entry types</h3>
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 // Instantiating BibTex (class)
 const bib = new bibtex(); 
@@ -100,7 +100,7 @@ console.log(entryTypes);
 <h3 id="example2">Example 2 - Get all entry type with fields (required + optional)</h3>
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 // Instantiating BibTex (class)
 const bib = new bibtex(); 
@@ -147,7 +147,7 @@ console.log(JSON.stringify(bookEntryFields, null, 4));
 <h3 id="example3">Example 3 - Get Specific entry type with fields (pass the name of entry type)</h3>
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 const bib = new bibtex();
 
@@ -180,7 +180,7 @@ console.log(JSON.stringify(proceedingsEntryFields, null, 4));
 <h3 id="example4">Example 4 - Get little description about entry types</h3>
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 const bib = new bibtex();
 
@@ -220,7 +220,7 @@ console.log(JSON.stringify(entryTypeDescription, null, 4));
 > Based on the scrapped data (using Python 3) from [http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#article](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#article).
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 const bib = new bibtex();
 
@@ -458,7 +458,7 @@ console.log(JSON.stringify(entryTypeFieldsDescription, null, 4));
 >
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 const bib = new bibtex();
 
@@ -518,7 +518,7 @@ console.log(formCode);
 > Based on the scrapped data from [http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#annote).
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 const bib = new bibtex();
 
@@ -666,7 +666,7 @@ les can handle any year whose last four nonpunctuation characters are numerals, 
 > Currently, there're only 3 formats available so format can take value of `1`/`2`/`3`.
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 const bib = new bibtex();
 
@@ -761,7 +761,7 @@ Below is the code to read the above file and get it as an object.
 > #### 9.1 Single bib entry specification, (curley braced representation)
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 const bib = new bibtex();
 
 /* NOTE:
@@ -813,7 +813,7 @@ And below is the code that reads and returns an object containing the details of
 > #### 9.2 Single bib entry specification, (double quoted representation)
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 const bib = new bibtex();
 
 const bibObject = bib.getBibAsObject('./docs/examples/BibTeX_example08_book_diff.bib');
@@ -884,7 +884,7 @@ and returns an array of bib objects.
 > #### 9.3 - Multiple bib entries specification (get an array of bib objects)
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 const bib = new bibtex();
 
 // Getting an array of bib objects
@@ -971,7 +971,7 @@ console.log(JSON.stringify(bibArr, null, 4));
 The below code explains the coversion process well with related outputs as comments.
 
 ```javascript
-const bibtex = require("../index");
+const bibtex = require("@hygull/bibtex");
 
 const bib = new bibtex();
 
