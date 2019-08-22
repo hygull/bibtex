@@ -122,7 +122,7 @@ function fieldsAreOk(object) {
 	// ========== All fields are ok ['entryType', 'key', 'data'] ==========
 	// Now let's move to check for valid fields for any specific entry type
 	const entryType = object.entryType; // Checks entry type etc.
-	const bibtex = require('./BibTeX');
+	const bibtex = require('./BibTex');
 	const bib = new bibtex();
 
 	const entryTypeFields = bib.getSpecificEntryTypeFields(entryType);
