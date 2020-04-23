@@ -1,3 +1,3 @@
-const bibTeX = require('./src/BibTeX')
+const bibTeX = require('./src/BibTex')
 
 module.exports = bibTeX
